@@ -1,0 +1,38 @@
+set alias_file=~/.mutt/aliases.rc
+
+set imap_user = ""
+set imap_pass = ""
+set smtp_url = ""
+set smtp_pass = ""
+
+set ssl_force_tls=yes
+set ssl_starttls=yes
+unset imap_passive
+
+set folder="imaps://exchange.postoffice.net/"
+set spoolfile = "+INBOX"
+set record="+Sent"
+
+set beep_new
+set sort="threads"
+set sort_aux="reverse-last-date-received"
+auto_view text/html
+set reverse_alias # Show alias instead of email
+
+# Mail sending options
+set realname = "Ben Christensen"
+set from = "ben@arbor.net"
+set include="yes" # Include copy of message during reply
+set signature=~/.mutt/signature
+
+# Polling frequencies
+set timeout=10 # Current mailbox poll freq (x seconds)
+set mail_check=60 # Other mailbox poll freq (x seconds)
+
+# Caching for speed
+set header_cache=~/.mutt/cache/headers
+set message_cachedir=~/.mutt/cache/bodies
+set certificate_file=~/.mutt/certificates
+
+# Display download process
+ set net_inc=5

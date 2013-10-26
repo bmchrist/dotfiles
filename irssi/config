@@ -1,0 +1,87 @@
+servers = (
+  {
+    address = "detroit.arbor.net";
+    chatnet = "Arbor";
+    port = "57005";
+    password = "";
+    use_ssl = "no";
+    ssl_verify = "no";
+    autoconnect = "yes";
+  },
+  { address = "lug.mtu.edu"; chatnet = "MTULUG"; autoconnect = "yes"; }
+);
+
+chatnets = {
+  MTULUG = { type = "IRC"; nick = "bmchrist"; };
+  Arbor = { type = "IRC"; nick = "ben"; };
+};
+
+channels = (
+  { name = "#hackers"; chatnet = "Arbor"; autojoin = "yes"; },
+  { name = "#asert"; chatnet = "Arbor"; autojoin = "yes"; },
+  { name = "#mtu"; chatnet = "MTULUG"; autojoin = "yes"; }
+);
+
+aliases = {
+  J = "join";
+  WJOIN = "join -window";
+  WQUERY = "query -window";
+  LEAVE = "part";
+  BYE = "quit";
+  EXIT = "quit";
+  SIGNOFF = "quit";
+  DESCRIBE = "action";
+  DATE = "time";
+  HOST = "userhost";
+  LAST = "lastlog";
+  SAY = "msg *";
+  WI = "whois";
+  WII = "whois $0 $0";
+  WW = "whowas";
+  W = "who";
+  N = "names";
+  M = "msg";
+  T = "topic";
+  C = "clear";
+  CL = "clear";
+  K = "kick";
+  KB = "kickban";
+  KN = "knockout";
+  BANS = "ban";
+  B = "ban";
+  MUB = "unban *";
+  UB = "unban";
+  IG = "ignore";
+  UNIG = "unignore";
+  SB = "scrollback";
+  UMODE = "mode $N";
+  WC = "window close";
+  WN = "window new hide";
+  SV = "say Irssi $J ($V) - http://irssi.org/";
+  GOTO = "sb goto";
+  CHAT = "dcc chat";
+  RUN = "SCRIPT LOAD";
+  CALC = "exec - if command -v bc >/dev/null 2>&1\\; then printf '%s=' '$*'\\; echo '$*' | bc -l\\; else echo bc was not found\\; fi";
+  SBAR = "STATUSBAR";
+  INVITELIST = "mode $C +I";
+  Q = "QUERY";
+  "MANUAL-WINDOWS" = "set use_status_window off;set autocreate_windows off;set autocreate_query_level none;set autoclose_windows off;set reuse_unused_windows on;save";
+  EXEMPTLIST = "mode $C +e";
+  ATAG = "WINDOW SERVER";
+  UNSET = "set -clear";
+  RESET = "set -default";
+  type = "IRC";
+};
+
+settings = {
+  core = { 
+    real_name = "Ben Christensen";
+    user_name = "ben";
+    nick = "ben";
+  };
+  "fe-text" = { actlist_sort = "refnum"; };
+  "fe-common/core" = { AUTOLOG = "yes"; show_names_on_join = "no"; };
+  type = "IRC";
+};
+ignores = ( { level = "JOINS PARTS QUITS NICKS"; } );
+logs = { };
