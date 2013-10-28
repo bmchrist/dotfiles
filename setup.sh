@@ -12,6 +12,7 @@ then
 elif [[ `uname -s` == "Linux" ]]  
 then
   if [[ -e /etc/debian_version ]]
+  then
     apt-get install git python-pip
   fi
 fi
