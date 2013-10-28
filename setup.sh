@@ -1,6 +1,8 @@
 #!/bin/bash
 # thanks to @jsvana for dotfiles-foo
 
+git submodule init
+git submodule update
 bash config-setup.sh
 
 mkdir ~/projects
@@ -14,7 +16,8 @@ elif [[ `uname -s` == "Linux" ]]
 then
   if [[ -e /etc/debian_version ]]
   then
-    sudo apt-get -y install git python-pip ipython
+    sudo apt-get update
+    sudo apt-get -y install git python-pip ipython make
   fi
 fi
 
