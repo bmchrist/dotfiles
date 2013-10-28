@@ -1,15 +1,10 @@
 set alias_file=~/.mutt/aliases.rc
-
-set imap_user = ""
-set imap_pass = ""
-set smtp_url = ""
-set smtp_pass = ""
+source ~/.mutt/user.rc
 
 set ssl_force_tls=yes
 set ssl_starttls=yes
 unset imap_passive
 
-set folder="imaps://exchange.postoffice.net/"
 set spoolfile = "+INBOX"
 set record="+Sent"
 
@@ -20,8 +15,6 @@ auto_view text/html
 set reverse_alias # Show alias instead of email
 
 # Mail sending options
-set realname = "Ben Christensen"
-set from = "ben@arbor.net"
 set include="yes" # Include copy of message during reply
 set signature=~/.mutt/signature
 

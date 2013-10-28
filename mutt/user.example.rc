@@ -1,0 +1,7 @@
+set imap_user = ""
+set imap_pass = ""
+set smtp_url = ""
+set smtp_pass = ""
+set realname = "Ben Christensen"
+set from = "ben@arbor.net"
+set folder="imaps://exchange.postoffice.net/"
