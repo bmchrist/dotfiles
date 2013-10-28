@@ -11,10 +11,12 @@ then
   bash osx-setup.sh
 elif [[ `uname -s` == "Linux" ]]  
 then
-  echo "yo"
+  if [[ -e /etc/debian_version ]]
+    apt-get install git python-pip
+  fi
 fi
 
-vim +BundleInstall +qall
 pip install ipython
+vim +BundleInstall +qall
 
 echo "Done. Note that some of these changes require a logout/restart to take effect."
