@@ -1,2 +1,6 @@
 mutt/user.rc
+mutt/cache/headers/*
+mutt/cache/bodies/*
+mutt/certificates/*
+
 vim/bundle/*
