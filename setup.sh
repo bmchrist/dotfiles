@@ -9,15 +9,15 @@ if [[ `uname -s` == "Darwin" ]]
 then
   bash brew-setup.sh
   bash osx-setup.sh
+  pip install ipython
 elif [[ `uname -s` == "Linux" ]]  
 then
   if [[ -e /etc/debian_version ]]
   then
-    sudo apt-get install git python-pip
+    sudo apt-get -y install git python-pip ipython
   fi
 fi
 
-pip install ipython
 vim +BundleInstall +qall
 
 echo "Done. Note that some of these changes require a logout/restart to take effect."
