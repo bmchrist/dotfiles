@@ -8,18 +8,15 @@ servers = (
     ssl_verify = "no";
     autoconnect = "yes";
   },
-  { address = "lug.mtu.edu"; chatnet = "MTULUG"; autoconnect = "yes"; }
 );
 
 chatnets = {
-  MTULUG = { type = "IRC"; nick = "bmchrist"; };
   Arbor = { type = "IRC"; nick = "ben"; };
 };
 
 channels = (
   { name = "#hackers"; chatnet = "Arbor"; autojoin = "yes"; },
   { name = "#asert"; chatnet = "Arbor"; autojoin = "yes"; },
-  { name = "#mtu"; chatnet = "MTULUG"; autojoin = "yes"; }
 );
 
 aliases = {

@@ -27,5 +27,5 @@ set header_cache=~/.mutt/cache/headers
 set message_cachedir=~/.mutt/cache/bodies
 set certificate_file=~/.mutt/certificates
 
-# Display download process
+# Display download progress
  set net_inc=5
