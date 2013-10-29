@@ -4,3 +4,4 @@ mutt/cache/bodies/*
 mutt/certificates/*
 
 vim/bundle/*
+!vim/bundle/vundle
