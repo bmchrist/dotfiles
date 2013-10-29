@@ -1,7 +1,7 @@
 autoload -Uz compinit
 compinit -u
 
-export EDITOR=/usr/local/bin/vim
+export EDITOR=vim
 
 HISTFILE=~/.zsh_history
 HISTSIZE=1000
