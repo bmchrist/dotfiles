@@ -25,6 +25,7 @@ brew install php55
 brew install git
 brew install ack
 brew install mutt
+brew install w3m # for html display w/ mutt
 
 # Install native apps
 brew tap phinze/homebrew-cask

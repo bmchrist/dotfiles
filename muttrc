@@ -29,3 +29,14 @@ set certificate_file=~/.mutt/certificates
 
 # Display download progress
  set net_inc=5
+# MIME-Types which should be automatically displayed. If a copiousoutput
+# exists, use it and display it in internal pager.
+# (if $implicit_autoview is set, this is automated for MIME types where
+#  an entry with copiousoutput exists in the mailcap)
+#
+
+# Set content types to automatically display
+unauto_view *   # remove all old entries
+auto_view text/richtext text/html
+
+

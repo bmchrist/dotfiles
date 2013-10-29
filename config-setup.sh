@@ -13,5 +13,7 @@ config_link zshrc
 config_link vim
 config_link vimrc
 config_link mutt
+config_link mime.types
+config_link mailcap
 config_link muttrc
 config_link irssi
