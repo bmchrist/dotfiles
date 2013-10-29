@@ -17,7 +17,7 @@ then
   if [[ -e /etc/debian_version ]]
   then
     sudo apt-get update
-    sudo apt-get -y install git python-pip ipython make
+    sudo apt-get -y install git python-pip ipython make zsh
   fi
 fi
 
