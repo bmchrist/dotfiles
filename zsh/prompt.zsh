@@ -9,7 +9,12 @@ zstyle ':vcs_info:*' stagedstr "${fg[red]}!${reset_color}"
 zstyle ':vcs_info:*' unstagedstr "${fg[yellow]}?${reset_color}"
 zstyle ':vcs_info:*' enable git svn #hg
 
-# TODO some SSH indicator
+ssh_conn=""
+if [[ -n $SSH_CONNECTION ]]
+then
+  ssh_conn="a"
+  ssh_conn="${fg[red]}⸪${reset_color} "
+fi
 
 setopt prompt_subst
 
@@ -43,7 +48,7 @@ precmd(){
 }
 
 PROMPT='
-${fg[magenta]}%n${reset_color}@${fg[cyan]}%m${reset_color}${batt} in ${fg_bold[green]}%~${reset_color}${vcs_info_msg_0_}
+${ssh_conn}${fg[magenta]}%n${reset_color}@${fg[cyan]}%m${reset_color}${batt} in ${fg_bold[green]}%~${reset_color}${vcs_info_msg_0_}
 [%?]%# '
 #%(?..${fg_bold[white]}[%?]${reset_color} )'
 RPROMPT='%T'
