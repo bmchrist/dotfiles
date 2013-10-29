@@ -16,7 +16,8 @@ elif [[ `uname -s` == "Linux" ]]
 then
   if [[ -e /etc/debian_version ]]
   then
-    sudo apt-get update
+    echo "Updating apt-get..."
+    sudo apt-get update >/dev/null
     sudo apt-get -y install git python-pip ipython make zsh
   fi
 fi
