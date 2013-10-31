@@ -18,7 +18,7 @@ then
   then
     echo "Updating apt-get..."
     sudo apt-get update >/dev/null
-    sudo apt-get -y install git python-pip ipython make zsh
+    sudo apt-get -y install git python-pip ipython make zsh tmux
   fi
 fi
 
