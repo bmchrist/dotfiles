@@ -1,3 +1,6 @@
+[push]
+  default = simple
+
 [user]
   name = Ben Christensen
   email = bmchrist@mtu.edu
