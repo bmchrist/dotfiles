@@ -17,3 +17,4 @@ config_link mime.types
 config_link mailcap
 config_link muttrc
 config_link irssi
+config_link gitconfig
