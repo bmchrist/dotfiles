@@ -8,7 +8,6 @@ unset imap_passive
 set spoolfile = "+INBOX"
 set record="+Sent"
 
-set beep_new
 set sort="threads"
 set sort_aux="reverse-last-date-received"
 auto_view text/html
