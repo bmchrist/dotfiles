@@ -15,3 +15,4 @@ eval "$(rbenv init -)"
 . ~/.zsh/tmuxinator.zsh
 . ~/.zsh/prompt.zsh
 . ~/.zsh/aliases.zsh
+. ~/.zshrc.local

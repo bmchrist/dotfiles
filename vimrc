@@ -44,6 +44,7 @@ Bundle 'chreekat/vim-paren-crosshairs'
 Bundle 'airblade/vim-gitgutter'
 Bundle 'Raimondi/delimitMate'
 Bundle 'scrooloose/syntastic'
+Bundle 'vim-scripts/a.vim'
 filetype plugin indent on " Load plugin and indent for recognized filetypes 
 
 let g:signify_vcs_list = ['git']
