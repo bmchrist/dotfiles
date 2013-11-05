@@ -2,7 +2,7 @@
 # credit for script base: http://mths.be/osx
 
 # TODO - swipe between full, mission control, expose w/ three fingers
-
+# TODO - remap caps lock -> ctrl
 # Ask for the administrator password upfront
 sudo -v
 
