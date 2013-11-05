@@ -10,6 +10,7 @@ function config_link {
 
 config_link zsh
 config_link zshrc
+config_link zprofile
 config_link vim
 config_link vimrc
 config_link mutt
@@ -18,3 +19,4 @@ config_link mailcap
 config_link muttrc
 config_link irssi
 config_link gitconfig
+config_link tmux.conf

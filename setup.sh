@@ -12,6 +12,15 @@ then
   bash brew-setup.sh
   bash osx-setup.sh
   pip install ipython
+  
+  rbenv version | grep '2.0.0-p247'
+  if [[ $? -eq 0 ]] then 
+    rbenv install 2.0.0-p247
+  fi
+  rbenv global 2.0.0-p247
+
+  gem install tmuxinator
+
 elif [[ `uname -s` == "Linux" ]]  
 then
   if [[ -e /etc/debian_version ]]
