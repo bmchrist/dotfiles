@@ -14,7 +14,8 @@ then
   pip install ipython
   
   rbenv version | grep '2.0.0-p247'
-  if [[ $? -eq 0 ]] then 
+  if [[ $? -eq 0 ]]
+  then 
     rbenv install 2.0.0-p247
   fi
   rbenv global 2.0.0-p247
