@@ -33,23 +33,6 @@ slate.bindAll({
                 $('center',    'top',    3, 3)],
             l: [$('barResize', 'right',  3),
                 $('center',    'right',  3, 3)],
-
-            // corners
-            y: [$('corner', 'top-left',     3, 2),
-                $('corner', 'top-left',     3, 3)],
-            i: [$('corner', 'top-right',    3, 2),
-                $('corner', 'top-right',    3, 3)],
-            b: [$('corner', 'bottom-left',  3, 2),
-                $('corner', 'bottom-left',  3, 3)],
-            m: [$('corner', 'bottom-right', 3, 2),
-                $('corner', 'bottom-right', 3, 3)],
-
-            // centers
-            u: [$('center', 'top'),
-                $('center', 'top', 3, 3)],
-            n: [$('center', 'bottom'),
-                $('center', 'bottom', 3, 3)],
-            'return': $('center', 'center', 3, 3)
         },
         // bars
         h: [$('barResize', 'left',  2),
@@ -70,22 +53,18 @@ slate.bindAll({
         // centers
         u: $('center', 'top'),
         n: $('center', 'bottom'),
-        'return': $('center', 'center'),
-        // throw to monitor
-        '`': ['throw 0 resize',
-              'throw 1 resize'],
-        '1': $('toss', '0', 'resize'),
-        '2': $('toss', '1', 'resize'),
-        '3': $('toss', '2', 'resize'),
+       
+        // maximize
+        'space': $('divResize', 1,1), 
+
         // direct focus 
-        a: $.focus('Adium'),
         c: $.focus('Google Chrome'),
         s: $.focus('Sublime Text'),
-        t: $.focus('Terminal'),
+        t: $.focus('iTerm'),
         f: $.focus('Finder'),
-        e: $.focus('Sparrow'),
-        x: $.focus('X11'),
-        p: $.focus('Spotify'),
+        m: $.focus('Spotify'),
+        p: $.focus('Preview'),
+
         // utility functions
         f1: 'relaunch',
         z: 'undo',
