@@ -49,17 +49,6 @@ filetype plugin indent on " Load plugin and indent for recognized filetypes
 
 let g:signify_vcs_list = ['git']
 
-"Make <tab> autocomplete
-"From 'Hacking Vim'
-function! CleverTab()
-  if strpart( getline('.'), 0, col('.')-1 ) =~ '^\s*$'
-    return "\<Tab>"
-  else
-    return "\<C-N>"
-  endif
-endfunction
-inoremap <Tab> <C-R>=CleverTab()<CR>
-
 " Brief crosshairs on the cursor
 function! CursorPing()
   set cursorline cursorcolumn
