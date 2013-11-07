@@ -4,3 +4,6 @@
 [submodule "tmuxinator"]
 	path = tmuxinator
 	url = https://github.com/aziz/tmuxinator
+[submodule "reslate"]
+	path = reslate
+	url = https://github.com/lunixbochs/reslate

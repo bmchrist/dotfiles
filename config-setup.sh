@@ -8,6 +8,8 @@ function config_link {
   fi
 }
 
+config_link reslate
+config_link slate.js
 config_link zsh
 config_link zshrc
 config_link zprofile
