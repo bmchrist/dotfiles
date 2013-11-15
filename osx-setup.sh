@@ -3,6 +3,9 @@
 
 # TODO - swipe between full, mission control, expose w/ three fingers
 # TODO - remap caps lock -> ctrl
+# TODO - install keyremap4macbook
+# Configure caps lock (esc alone or ctrl when pushed with another key)
+
 # Ask for the administrator password upfront
 sudo -v
 

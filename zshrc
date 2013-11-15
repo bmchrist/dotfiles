@@ -1,6 +1,7 @@
 autoload -Uz compinit
 compinit -u
 
+bindkey -v
 export EDITOR=vim
 
 HISTFILE=~/.zsh_history
@@ -14,7 +15,6 @@ if which rbenv > /dev/null 2>&1
 then
   eval "$(rbenv init -)"
 fi
-
 
 . ~/.zsh/tmuxinator.zsh
 . ~/.zsh/prompt.zsh
