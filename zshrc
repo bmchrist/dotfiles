@@ -28,4 +28,7 @@ fi
 . ~/.zsh/tmuxinator.zsh
 . ~/.zsh/prompt.zsh
 . ~/.zsh/aliases.zsh
-. ~/.zshrc.local
+if [ -f ~/.zshrc.local ]
+then
+  . ~/.zshrc.local
+fi
