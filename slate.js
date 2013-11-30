@@ -58,12 +58,13 @@ slate.bindAll({
         'space': $('divResize', 1,1), 
 
         // direct focus 
-        c: $.focus('Google Chrome'),
-        s: $.focus('Sublime Text'),
-        t: $.focus('iTerm'),
         f: $.focus('Finder'),
-        m: $.focus('Spotify'),
+        c: $.focus('Google Chrome'),
+        t: $.focus('iTerm'),
         p: $.focus('Preview'),
+        k: $.focus('Skype'),
+        m: $.focus('Spotify'),
+        s: $.focus('Sublime Text 2'),
 
         // utility functions
         f1: 'relaunch',
