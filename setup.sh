@@ -1,6 +1,8 @@
 #!/bin/bash
 # thanks to @jsvana for dotfiles-foo
 
+# Requires command line tools and git installed
+
 git submodule init
 git submodule update
 bash config-setup.sh

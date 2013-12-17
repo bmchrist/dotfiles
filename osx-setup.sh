@@ -45,6 +45,9 @@ defaults write NSGlobalDomain KeyRepeat -int 0
 # Turn off keyboard illumination when computer is not used for 5 minutes
 defaults write com.apple.BezelServices kDimTime -int 300
 
+# Chrome two finger next/previous disabled
+defaults write com.google.Chrome.plist AppleEnableSwipeNavigateWithScrolls -bool FALSE
+
 # ==============
 # Other Settings
 # ==============
@@ -67,8 +70,8 @@ defaults write com.apple.finder ShowPathbar -bool true
 # Set dock icon size 36 px
 defaults write com.apple.dock tilesize -int 12
 
-# Empty Trash securely by default
-defaults write com.apple.finder EmptyTrashSecurely -bool true
+# Ensure empty trash securely is false (no need for all that extra I/O -- the drive should be encrypted anyway)
+defaults write com.apple.finder EmptyTrashSecurely -bool false
 
 # Speed up Mission Control animations
 defaults write com.apple.dock expose-animation-duration -float 0.1
