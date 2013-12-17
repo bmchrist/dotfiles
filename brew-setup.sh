@@ -23,25 +23,27 @@ brew tap josegonzalez/homebrew-php
 brew install php55
 
 brew install git
+brew install python
 brew install ack
 brew install mutt
 brew install w3m # for html display w/ mutt
 brew install tmux
 brew install rbenv ruby-build
-brew install ghci
+brew install ghc
 
 # Install native apps
 brew tap phinze/homebrew-cask
 brew install brew-cask
 
 function cask_install() {
-  brew cask install "${@}" 2> /dev/null
+  brew cask install "${@}"
 }
 
 cask_install dropbox
 cask_install firefox
 cask_install iterm2
 cask_install sublime-text
+cask_install google-chrome
 
 brew cleanup
 

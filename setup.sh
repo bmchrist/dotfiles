@@ -12,11 +12,19 @@ mkdir ~/projects
 if [[ `uname -s` == "Darwin" ]]
 then
   bash brew-setup.sh
+  
+  dscl . read /Users/ben | grep /bin/zsh
+  if [[ $? -eq 1 ]]
+  then
+    chsh -s $(which zsh) $(whoami)
+  fi
+  
+  #zsh #rbenv needs some variables that are set in .zshrc
   bash osx-setup.sh
   pip install ipython
   
   rbenv version | grep '2.0.0-p247'
-  if [[ $? -eq 0 ]]
+  if [[ $? -eq 1 ]] # Grep found nothing returns 1
   then 
     rbenv install 2.0.0-p247
   fi
