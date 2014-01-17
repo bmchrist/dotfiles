@@ -44,6 +44,13 @@ cask_install firefox
 cask_install iterm2
 cask_install sublime-text
 cask_install google-chrome
+cask_install slate
+cask_install keyremap4macbook
+cask_install steam
+cask_install spotify
+cask_install pckeyboardhack
+cask_install utorrent
+cask_install flash
 
 brew cleanup
 

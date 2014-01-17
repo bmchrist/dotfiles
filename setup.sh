@@ -1,7 +1,7 @@
 #!/bin/bash
 # thanks to @jsvana for dotfiles-foo
 
-# Requires command line tools and git installed
+# Requires command line tools, xcode, git
 
 git submodule init
 git submodule update

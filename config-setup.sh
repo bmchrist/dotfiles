@@ -4,6 +4,7 @@
 function config_link {
   if [[ ! -e ~/.$1 ]]
   then
+    rm ~/.$1
     ln -s `pwd`/$1 ~/.$1
   fi
 }

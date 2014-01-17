@@ -31,10 +31,13 @@ sudo defaults write /Library/Preferences/com.apple.loginwindow AdminHostInfo Hos
 # ==================
 # Mouse and Keyboard
 # ==================
-# Trackpad: swipe between pages with three fingers
-defaults write NSGlobalDomain AppleEnableSwipeNavigateWithScrolls -bool true
-defaults -currentHost write NSGlobalDomain com.apple.trackpad.threeFingerHorizSwipeGesture -int 1
-defaults write com.apple.driver.AppleBluetoothMultitouch.trackpad TrackpadThreeFingerHorizSwipeGesture -int 1
+# Trackpad: swipe between spaces with three fingers
+# Not working ... :(
+#defaults write com.apple.AppleMultitouchTrackpad TrackpadThreeFingerHorizSwipeGesture -int 2
+#defaults write com.apple.driver.AppleBluetoothMultitouch.trackpad TrackpadThreeFingerHorizSwipeGesture -int 2
+
+defaults write com.apple.driver.AppleBluetoothMultitouch.trackpad -int 1
+defaults write com.apple.AppleMultitouchTrackpad Clicking -int 1
 
 # Disable press-and-hold for keys in favor of key repeat
 defaults write NSGlobalDomain ApplePressAndHoldEnabled -bool false
@@ -67,9 +70,6 @@ defaults write com.apple.finder DisableAllAnimations -bool true
 # Finder: show path bar
 defaults write com.apple.finder ShowPathbar -bool true
 
-# Set dock icon size 36 px
-defaults write com.apple.dock tilesize -int 12
-
 # Ensure empty trash securely is false (no need for all that extra I/O -- the drive should be encrypted anyway)
 defaults write com.apple.finder EmptyTrashSecurely -bool false
 
@@ -85,6 +85,15 @@ defaults write com.apple.dock dashboard-in-overlay -bool true
 # Don’t automatically rearrange Spaces based on most recent use
 defaults write com.apple.dock mru-spaces -bool false
 
+# Move the dock to the left
+defaults write com.apple.dock orientation -string left 
+
+# Set dock icon size 36 px
+defaults write com.apple.dock tilesize -int 12
+
+# Enable dock magnification
+defaults write com.apple.dock largesize -float 48 
+
 # Enable the 2D Dock
 defaults write com.apple.dock no-glass -bool true
 
@@ -94,6 +103,12 @@ defaults write com.apple.dock autohide -bool true
 # Set bottom right hot corner to put display to sleep
 defaults write com.apple.dock wvous-br-corner -int 10
 defaults write com.apple.dock wvous-br-modifier -int 0
+
+# No process indicator lights
+defaults write com.apple.dock show-process-indicators -int 0
+
+# Minimize to app icon
+defaults write com.apple.dock minimize-to-application -int 1
 
 # Disable Spotlight indexing for any volume that gets mounted and has not yet been indexed before.
 sudo defaults write /.Spotlight-V100/VolumeConfiguration Exclusions -array "/Volumes"
