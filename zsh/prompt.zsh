@@ -26,7 +26,6 @@ precmd(){
     zstyle ':vcs_info:*' formats " on ${fg[magenta]}%b${reset_color}%c%u."
   fi
 
-
   vcs_info
   if [[ `uname -s` == "Darwin" ]]
   then
@@ -48,7 +47,7 @@ precmd(){
 }
 
 PROMPT='
-${ssh_conn}${fg[magenta]}%n${reset_color}@${fg[cyan]}%m${reset_color}${batt} in ${fg_bold[green]}%~${reset_color}${vcs_info_msg_0_}
+${ssh_conn}${fg[magenta]}%n${reset_color}@${fg[cyan]}%m${reset_color}${batt} in ${fg[green]}%~${reset_color}${vcs_info_msg_0_}
 [%?]%# '
 #%(?..${fg_bold[white]}[%?]${reset_color} )'
 RPROMPT='%T'
