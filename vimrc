@@ -5,10 +5,12 @@ set noerrorbells
 " Display
 " =======
 " color kib_darktango
-set background=dark " Who uses a light background?
+"set background=dark " Who uses a light background?
 set colorcolumn=81 " all my CS profs have REALLY small screens
 "colorscheme base16-tomorrow
+set t_Co=256 " More colors
 colorscheme base16-atelierforest
+"colorscheme base16-tomorrow
 highlight ColorColumn ctermbg=7
 highlight ColorColumn guibg=Gray
 
@@ -20,8 +22,6 @@ set nowrap
 set relativenumber
 set number " line numbers
 
-set t_Co=256 " More colors
-syntax on " Syntax highlighting
 
 set scrolloff=5 " Show a few lines below where you're scrolling
 
@@ -56,6 +56,7 @@ set pastetoggle=<F2> " Toggle autoindent, for pasting
 set directory=/tmp " Keep temp files out
 set autoread
 
+filetype off
 " Plugins
 set rtp+=~/.vim/bundle/vundle/
 call vundle#rc()
@@ -84,6 +85,13 @@ Bundle 'vim-scripts/a.vim'
 Bundle 'kien/ctrlp.vim'
 " Comment shortcut
 Bundle 'scrooloose/nerdcommenter'
+Bundle 'groenewege/vim-less'
+Bundle 'kchmck/vim-coffee-script'
+" Controls for altering surrounding braces/parens/etc
+Bundle 'tpope/vim-surround'
+Bundle 'tpope/vim-fugitive'
+
+syntax enable
 filetype plugin indent on " Load plugin and indent for recognized filetypes
 
 let g:signify_vcs_list = ['git'] " Maybe this was for the git gutter
@@ -104,8 +112,8 @@ au Syntax * RainbowParenthesesLoadRound
 au Syntax * RainbowParenthesesLoadSquare
 au Syntax * RainbowParenthesesLoadBraces
 
-autocmd BufWritePre * :%s/\s\+$//e
-autocmd BufWritePre * :%s/\n\{3,}/\r\r/e
+"autocmd BufWritePre * :%s/\s\+$//e
+"autocmd BufWritePre * :%s/\n\{3,}/\r\r/e
 
 " Brief crosshairs on the cursor
 function! CursorPing()

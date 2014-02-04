@@ -1,23 +1,23 @@
-" Base16 Atelier Forest (https://github.com/chriskempson/base16)
-" Scheme: Bram de Haan (http://atelierbram.github.io/syntax-highlighting/atelier-schemes/forest)
+" Base16 Atelier Heath (https://github.com/chriskempson/base16)
+" Scheme: Bram de Haan (http://atelierbram.github.io/syntax-highlighting/atelier-schemes/heath)
 
 " GUI color definitions
-let s:gui00 = "1b1918"
-let s:gui01 = "2c2421"
-let s:gui02 = "68615e"
-let s:gui03 = "766e6b"
-let s:gui04 = "9c9491"
-let s:gui05 = "a8a19f"
-let s:gui06 = "e6e2e0"
-let s:gui07 = "f1efee"
-let s:gui08 = "f22c40"
-let s:gui09 = "df5320"
-let s:gui0A = "d5911a"
-let s:gui0B = "5ab738"
-let s:gui0C = "00ad9c"
-let s:gui0D = "407ee7"
-let s:gui0E = "6666ea"
-let s:gui0F = "c33ff3"
+let s:gui00 = "1b181b"
+let s:gui01 = "292329"
+let s:gui02 = "695d69"
+let s:gui03 = "776977"
+let s:gui04 = "9e8f9e"
+let s:gui05 = "ab9bab"
+let s:gui06 = "d8cad8"
+let s:gui07 = "f7f3f7"
+let s:gui08 = "ca402b"
+let s:gui09 = "a65926"
+let s:gui0A = "bb8a35"
+let s:gui0B = "379a37"
+let s:gui0C = "159393"
+let s:gui0D = "516aec"
+let s:gui0E = "7b59c0"
+let s:gui0F = "cc33cc"
 
 " Terminal color definitions
 let s:cterm00 = "Black"
@@ -49,7 +49,7 @@ endif
 " Theme setup
 hi clear
 syntax reset
-let g:colors_name = "base16-atelierforest"
+let g:colors_name = "base16-atelierheath"
 
 " Highlighting function
 fun <sid>hi(group, guifg, guibg, ctermfg, ctermbg, attr)
