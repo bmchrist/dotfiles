@@ -4,7 +4,8 @@ alias django="python manage.py"
 alias djrs="django runserver"
 alias djsh="django shell"
 
-alias rs="rails server"
+alias rs="rails server thin"
+alias rails:rest="rake db:reset && rake elasticsearch:reset"
 
 alias ts="tmuxinator start"
 
