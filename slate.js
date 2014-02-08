@@ -64,7 +64,8 @@ slate.bindAll({
         p: $.focus('Preview'),
         k: $.focus('Skype'),
         m: $.focus('Spotify'),
-        s: $.focus('Sublime Text 2'),
+        s: $.focus('Sublime Text'),
+        h: $.focus('HipChat'),
 
         // utility functions
         f1: 'relaunch',
