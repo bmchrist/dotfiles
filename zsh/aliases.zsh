@@ -5,7 +5,6 @@ alias djrs="django runserver"
 alias djsh="django shell"
 
 alias rs="rails server thin"
-alias rails:reset="rake db:reset && rake elasticsearch:reset; rake test:prepare"
 
 alias ts="tmuxinator start"
 
