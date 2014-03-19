@@ -9,6 +9,7 @@ function config_link {
   fi
 }
 
+config_link ackrc
 config_link reslate
 config_link slate.js
 config_link zsh
