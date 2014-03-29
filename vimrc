@@ -27,7 +27,7 @@ set scrolloff=5 " Show a few lines below where you're scrolling
 
 " Functionality
 " =============
-let mapleader = ","
+let mapleader = " "
 
 set expandtab
 set tabstop=2
@@ -90,6 +90,8 @@ Bundle 'kchmck/vim-coffee-script'
 " Controls for altering surrounding braces/parens/etc
 Bundle 'tpope/vim-surround'
 Bundle 'tpope/vim-fugitive'
+Bundle 'tpope/vim-endwise'
+Bundle 'tpope/vim-rails'
 
 syntax enable
 filetype plugin indent on " Load plugin and indent for recognized filetypes
