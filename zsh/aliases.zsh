@@ -5,6 +5,7 @@ alias djrs="django runserver"
 alias djsh="django shell"
 
 alias rs="rails server thin"
+alias rdm="rake db:migrate && rake db:rollback && rake db:migrate"
 
 alias ts="tmuxinator start"
 
@@ -17,4 +18,3 @@ alias gc="git commit"
 alias gf="git fetch"
 alias gd="git diff"
 alias gfrm="git checkout master && git fetch && git rebase origin/master"
-#alias tmux="TERM=screen-256color-bce tmux"
