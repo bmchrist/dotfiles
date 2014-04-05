@@ -42,7 +42,7 @@ set smartcase
 set incsearch
 set showmatch
 set hlsearch
-nnoremap <leader><space> :noh<cr>
+nnoremap <leader>, :noh<cr>
 " ^ Clear search history
 
 set hidden " Buffers are hidden instead of closed when opening a new file
@@ -80,7 +80,7 @@ Bundle 'Raimondi/delimitMate'
 " Cool syntax highlighting
 Bundle 'scrooloose/syntastic'
 " Alternate related files easily (.c <-> .h)
-Bundle 'vim-scripts/a.vim'
+Bundle 'bmchrist/a.vim'
 " Just like sublime
 Bundle 'kien/ctrlp.vim'
 " Comment shortcut
