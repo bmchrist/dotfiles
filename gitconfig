@@ -4,3 +4,6 @@
 [user]
   name = Ben Christensen
   email = bmchrist@mtu.edu
+
+[alias]
+  root = rev-parse --show-toplevel
