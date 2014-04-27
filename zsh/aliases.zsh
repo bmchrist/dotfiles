@@ -1,11 +1,15 @@
-# Django aliases
+alias projects="cd ~/projects"
 alias dotfiles="cd ~/projects/dotfiles"
+alias handshake="cd ~/projects/handshake"
+
+# Django aliases
 alias django="python manage.py"
 alias djrs="django runserver"
 alias djsh="django shell"
 
-alias rs="rails server thin"
-alias rdm="rake db:migrate && rake db:rollback && rake db:migrate"
+alias rsu="unicorn -p 3000 -c ./config/unicorn.rb"
+alias rsf="foreman start -f=Procfile.development"
+alias rst="rails server thin"
 
 alias ts="tmuxinator start"
 
