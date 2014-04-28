@@ -5,7 +5,7 @@ set noerrorbells
 " Display
 " =======
 " color kib_darktango
-"set background=dark " Who uses a light background?
+set background=dark " Who uses a light background?
 set colorcolumn=81 " all my CS profs have REALLY small screens
 "colorscheme base16-tomorrow
 set t_Co=256 " More colors
@@ -67,8 +67,6 @@ Bundle 'bling/vim-airline'
 Bundle 'bling/vim-bufferline'
 " Buffer sidebar with Leader+b
 Bundle 'jeetsukumaran/vim-buffergator'
-" Buffer juggler - most recent buffers Leader+lj
-Bundle 'sjbach/lusty'
 " Filesystem tree
 Bundle 'scrooloose/nerdtree'
 " So we can actually tell what parentheses match up with eachother
