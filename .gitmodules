@@ -7,3 +7,6 @@
 [submodule "reslate"]
 	path = reslate
 	url = https://github.com/lunixbochs/reslate
+[submodule "dotjs"]
+	path = dotjs
+	url = git@github.com:defunkt/dotjs.git
