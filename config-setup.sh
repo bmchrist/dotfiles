@@ -25,3 +25,5 @@ config_link irssi
 config_link gitconfig
 config_link tmux.conf
 config_link tmux_statusline
+config_link inputrc
+config_link irbrc
