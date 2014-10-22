@@ -1,15 +1,17 @@
 alias projects="cd ~/projects"
 alias dotfiles="cd ~/projects/dotfiles"
+
+# handshake stuff
 alias handshake="cd ~/projects/handshake"
+alias rsu="unicorn -p 3000 -c ./config/unicorn.rb"
+alias rsf="foreman start"
+alias rst="rails server thin"
+alias hrc="heroku run rails c --app"
 
 # Django aliases
 alias django="python manage.py"
 alias djrs="django runserver"
 alias djsh="django shell"
-
-alias rsu="unicorn -p 3000 -c ./config/unicorn.rb"
-alias rsf="foreman start -f=Procfile.development"
-alias rst="rails server thin"
 
 alias ts="tmuxinator start"
 
@@ -22,3 +24,6 @@ alias gc="git commit"
 alias gf="git fetch"
 alias gd="git diff"
 alias gfrm="git checkout master && git fetch && git rebase origin/master"
+alias gbrd="git branch --merged master | grep -v master | grep -v stable | xargs git branch -d; git cleanup"
+
+alias :q="exit"

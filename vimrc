@@ -126,6 +126,12 @@ function! CursorPing()
 endfunction
 nmap <Leader><Leader> :call CursorPing()<CR>
 
+function! GetCurrentBranch()
+    return substitute(system("git rev-parse --abbrev-ref HEAD"), '\n', '', '')
+endfunction
+nnoremap <leader>s :execute 'mksession! ~/.vim/sessions/' . GetCurrentBranch() . '.vim'<CR>
+nnoremap <leader>l :execute 'source ~/.vim/sessions/' . GetCurrentBranch() . '.vim'<CR>
+
 nmap <up> <nop>
 nmap <down> <nop>
 nmap <left> <nop>
