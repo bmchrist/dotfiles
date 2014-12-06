@@ -21,9 +21,11 @@ alias phil="head < /dev/random | mutt -s \"Rand\" -- pjmiddle@mtu.edu"
 alias gs="git status"
 alias ga="git add"
 alias gc="git commit"
-alias gf="git fetch"
 alias gd="git diff"
 alias gfrm="git checkout master && git fetch && git rebase origin/master"
-alias gbrd="git branch --merged master | grep -v master | grep -v stable | xargs git branch -d; git cleanup"
+alias gbrd="git branch --merged master | grep -v master | grep -v stable | xargs git branch -d; git branch-cleanup"
+alias gclean="gfrm; gbrd; git gc"
+
+
 
 alias :q="exit"

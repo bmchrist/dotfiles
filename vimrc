@@ -127,8 +127,9 @@ nmap <Leader><Leader> :call CursorPing()<CR>
 function! GetCurrentBranch()
     return substitute(system("git rev-parse --abbrev-ref HEAD"), '\n', '', '')
 endfunction
-nnoremap <leader>s :execute 'mksession! ~/.vim/sessions/' . GetCurrentBranch() . '.vim'<CR>
-nnoremap <leader>l :execute 'source ~/.vim/sessions/' . GetCurrentBranch() . '.vim'<CR>
+" Delete training whitespace
+nnoremap <leader>d :let _s=@/<Bar>:%s/\s\+$//e<Bar>:let @/=_s<Bar>:nohl<CR>
+
 
 nmap <up> <nop>
 nmap <down> <nop>
@@ -138,3 +139,8 @@ imap <up> <nop>
 imap <down> <nop>
 imap <left> <nop>
 imap <right> <nop>
+
+"highlight trailing whitespace
+highlight ExtraWhitespace ctermbg=red guibg=red
+match ExtraWhitespace /\s\+$/
+
