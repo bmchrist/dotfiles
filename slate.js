@@ -59,13 +59,11 @@ slate.bindAll({
 
         // direct focus 
         f: $.focus('Finder'),
-        c: $.focus('Google Chrome'),
-        t: $.focus('iTerm'),
-        p: $.focus('Preview'),
+        o: $.focus('Chrome'),
+        p: $.focus('iTerm'),
         k: $.focus('Skype'),
         m: $.focus('Spotify'),
         s: $.focus('Sublime Text'),
-        i: $.focus('HipChat'),
 
         // utility functions
         f1: 'relaunch',

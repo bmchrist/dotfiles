@@ -32,3 +32,5 @@ if [ -f ~/.zshrc.local ]
 then
   . ~/.zshrc.local
 fi
+
+stty icrnl # make sure return actaully makes a newline

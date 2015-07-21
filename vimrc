@@ -90,6 +90,12 @@ Bundle 'tpope/vim-surround'
 Bundle 'tpope/vim-fugitive'
 Bundle 'tpope/vim-endwise'
 Bundle 'tpope/vim-rails'
+" Run rspec easily from vim
+Bundle 'thoughtbot/vim-rspec'
+" And send those specs to tmux
+Bundle 'jgdavey/tslime.vim'
+" Ctags
+Bundle 'majutsushi/tagbar'
 
 syntax enable
 filetype plugin indent on " Load plugin and indent for recognized filetypes
@@ -144,3 +150,15 @@ imap <right> <nop>
 highlight ExtraWhitespace ctermbg=red guibg=red
 match ExtraWhitespace /\s\+$/
 
+
+let g:NERDCustomDelimiters = {
+      \ 'ruby': { 'left': '# ', 'leftAlt': '#'}
+\ }
+
+let g:rspec_command = 'call Send_to_Tmux("rspec {spec}\n")'
+map <Leader>rt :call RunCurrentSpecFile()<CR>
+map <Leader>s :call RunNearestSpec()<CR>
+map <Leader>l :call RunLastSpec()<CR>
+map <Leader>a :call RunAllSpecs()<CR>
+
+let g:airline#extensions#tagbar#enabled = 1
