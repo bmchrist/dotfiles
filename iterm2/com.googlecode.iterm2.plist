@@ -14193,7 +14193,7 @@
 	<key>NSWindow Frame NSColorPanel</key>
 	<string>307 276 214 309 0 0 1440 900 </string>
 	<key>NSWindow Frame Preferences</key>
-	<string>517 391 924 485 0 0 1440 877 </string>
+	<string>516 391 924 485 0 0 1440 877 </string>
 	<key>NSWindow Frame SUStatusFrame</key>
 	<string>530 561 384 129 0 0 1440 878 </string>
 	<key>NSWindow Frame UKCrashReporter</key>
