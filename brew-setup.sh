@@ -45,12 +45,18 @@ cask_install iterm2
 cask_install sublime-text
 cask_install google-chrome
 cask_install slate
-cask_install keyremap4macbook
 cask_install steam
 cask_install spotify
-cask_install pckeyboardhack
+cask_install karabiner
+cask_install seil
 cask_install utorrent
 cask_install flash
+cask_install cord
+cask_install flux
+cask_install virtualbox
+cask_install nosleep
+cask_install duet
+cask_install caffeine
 
 brew cleanup
 
