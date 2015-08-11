@@ -1,6 +1,6 @@
 #!/bin/bash
 
-ruby -e "$(curl -fsSL https://raw.github.com/Homebrew/homebrew/go/install)"
+ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 
 # Make sure we’re using the latest Homebrew
 brew update
@@ -57,6 +57,7 @@ cask_install virtualbox
 cask_install nosleep
 cask_install duet
 cask_install caffeine
+cask_install mailbox
 
 brew cleanup
 
