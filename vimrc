@@ -19,9 +19,8 @@ set noshowmode " Using vim-airline
 set nowrap
 
 " Combining rnu and nu in 7.4+ has relative for all but current line
-set relativenumber
 set number " line numbers
-
+set relativenumber
 
 set scrolloff=5 " Show a few lines below where you're scrolling
 
@@ -79,7 +78,7 @@ Bundle 'Raimondi/delimitMate'
 Bundle 'scrooloose/syntastic'
 " Alternate related files easily (.c <-> .h)
 Bundle 'bmchrist/a.vim'
-" Just like sublime
+"" Just like sublime
 Bundle 'kien/ctrlp.vim'
 " Comment shortcut
 Bundle 'scrooloose/nerdcommenter'
@@ -94,8 +93,6 @@ Bundle 'tpope/vim-rails'
 Bundle 'thoughtbot/vim-rspec'
 " And send those specs to tmux
 Bundle 'jgdavey/tslime.vim'
-" Ctags
-Bundle 'majutsushi/tagbar'
 
 syntax enable
 filetype plugin indent on " Load plugin and indent for recognized filetypes
