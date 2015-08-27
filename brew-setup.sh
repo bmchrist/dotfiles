@@ -30,6 +30,8 @@ brew install w3m # for html display w/ mutt
 brew install tmux
 brew install rbenv ruby-build
 brew install ghc
+brew install vim
+brew install reattach-to-user-namespace # For copying from tmux
 
 # Install native apps
 brew tap phinze/homebrew-cask
