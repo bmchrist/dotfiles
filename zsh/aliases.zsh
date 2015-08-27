@@ -8,6 +8,9 @@ alias rsf="foreman start"
 alias rst="rails server thin"
 alias hrc="heroku run rails c --app"
 
+# Gross handshake stuff
+alias kill_em_all="ps ax | ack 'postgres: ben handshake_dev' | awk -F ' ' '{print \$1}' | xargs kill"
+
 # Django aliases
 alias django="python manage.py"
 alias djrs="django runserver"
