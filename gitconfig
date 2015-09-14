@@ -8,3 +8,5 @@
 [alias]
   root = rev-parse --show-toplevel
   branch-cleanup = remote prune origin
+[github]
+	user = bmchrist

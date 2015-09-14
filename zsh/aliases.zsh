@@ -31,3 +31,18 @@ alias gbrd="git branch --merged master | grep -v master | grep -v stable | xargs
 alias gclean="gfrm; gbrd; git gc"
 
 alias :q="exit"
+
+alias zfs="bundle exec zenflow feature start"
+alias zhs="bundle exec zenflow hotfix start"
+
+alias zfu="bundle exec zenflow feature update"
+alias zhu="bundle exec zenflow hotfix update"
+
+alias zfp="bundle exec zenflow feature publish"
+alias zhp="bundle exec zenflow hotfix publish"
+
+alias zfr="bundle exec zenflow feature review"
+alias zhr="bundle exec zenflow hotfix review"
+
+alias zff="bundle exec zenflow feature finish"
+alias zhf="bundle exec zenflow hotfix finish"
