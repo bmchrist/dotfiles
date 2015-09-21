@@ -8,9 +8,6 @@ alias rsf="foreman start"
 alias rst="rails server thin"
 alias hrc="heroku run rails c --app"
 
-# Gross handshake stuff
-alias kill_em_all="ps ax | ack 'postgres: ben handshake_dev' | awk -F ' ' '{print \$1}' | xargs kill"
-
 # Django aliases
 alias django="python manage.py"
 alias djrs="django runserver"
@@ -21,6 +18,9 @@ alias ts="tmuxinator start"
 alias vbi="vim +PluginInstall! +qall"
 alias phil="head < /dev/random | mutt -s \"Rand\" -- pjmiddle@mtu.edu"
 
+alias :q="exit"
+
+# Git for days
 alias gs="git status"
 alias ga="git add"
 alias gc="git commit"
@@ -29,9 +29,9 @@ alias gd="git diff"
 alias gfrm="git checkout master && git fetch && git rebase origin/master"
 alias gbrd="git branch --merged master | grep -v master | grep -v stable | xargs git branch -d; git branch-cleanup"
 alias gclean="gfrm; gbrd; git gc"
+alias gcf="git branch | cut -c 3- | pick | xargs git checkout"
 
-alias :q="exit"
-
+# Zenflowwwwww
 alias zfs="bundle exec zenflow feature start"
 alias zhs="bundle exec zenflow hotfix start"
 

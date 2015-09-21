@@ -33,6 +33,10 @@ brew install ghc
 brew install vim
 brew install reattach-to-user-namespace # For copying from tmux
 
+# Gosh I love thoughtbot
+brew tap thoughtbot/formulae
+brew install pick # fuzzy matching
+
 # Install native apps
 brew tap phinze/homebrew-cask
 brew install brew-cask

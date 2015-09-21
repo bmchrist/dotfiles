@@ -18,6 +18,8 @@ set laststatus=2 " Always display status
 set noshowmode " Using vim-airline
 set nowrap
 
+set spell " Sometimes it helps to have help
+
 " Combining rnu and nu in 7.4+ has relative for all but current line
 set number " line numbers
 set relativenumber
