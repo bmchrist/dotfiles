@@ -2,7 +2,7 @@ alias projects="cd ~/projects"
 alias dotfiles="cd ~/projects/dotfiles"
 
 # handshake stuff
-alias handshake="cd ~/projects/handshake"
+alias hs="cd ~/projects/handshake"
 alias rsu="unicorn -p 3000 -c ./config/unicorn.rb"
 alias rsf="foreman start"
 alias rst="rails server thin"
@@ -40,6 +40,9 @@ alias zhu="bundle exec zenflow hotfix update"
 
 alias zfp="bundle exec zenflow feature publish"
 alias zhp="bundle exec zenflow hotfix publish"
+
+alias zhup="zhu && zhp"
+alias zfup="zfu && zfp"
 
 alias zfr="bundle exec zenflow feature review"
 alias zhr="bundle exec zenflow hotfix review"
