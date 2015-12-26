@@ -59,42 +59,44 @@ set autoread
 
 filetype off
 " Plugins
-set rtp+=~/.vim/bundle/vundle/
-call vundle#rc()
-Bundle 'gmarik/vundle'
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
+Plugin 'VundleVim/Vundle.vim'
 " Better status bar
-Bundle 'bling/vim-airline'
+Plugin 'bling/vim-airline'
 " Show my buffers in the status bar
-Bundle 'bling/vim-bufferline'
+Plugin 'bling/vim-bufferline'
 " Buffer sidebar with Leader+b
-Bundle 'jeetsukumaran/vim-buffergator'
+Plugin 'jeetsukumaran/vim-buffergator'
 " Filesystem tree
-Bundle 'scrooloose/nerdtree'
+Plugin 'scrooloose/nerdtree'
 " So we can actually tell what parentheses match up with eachother
-Bundle 'kien/rainbow_parentheses.vim'
+Plugin 'kien/rainbow_parentheses.vim'
 " Git diff information in the gutter
-Bundle 'airblade/vim-gitgutter'
+Plugin 'airblade/vim-gitgutter'
 " Auto delimiter closing
-Bundle 'Raimondi/delimitMate'
+Plugin 'Raimondi/delimitMate'
 " Cool syntax highlighting
-Bundle 'scrooloose/syntastic'
+Plugin 'scrooloose/syntastic'
 " Alternate related files easily (.c <-> .h)
-Bundle 'bmchrist/a.vim'
+Plugin 'bmchrist/a.vim'
 "" Just like sublime
-Bundle 'kien/ctrlp.vim'
+Plugin 'kien/ctrlp.vim'
 " Comment shortcut
-Bundle 'scrooloose/nerdcommenter'
-Bundle 'groenewege/vim-less'
-Bundle 'kchmck/vim-coffee-script'
+Plugin 'scrooloose/nerdcommenter'
+Plugin 'groenewege/vim-less'
+Plugin 'kchmck/vim-coffee-script'
 " Controls for altering surrounding braces/parens/etc
-Bundle 'tpope/vim-surround'
-Bundle 'tpope/vim-fugitive'
-Bundle 'tpope/vim-endwise'
-Bundle 'tpope/vim-rails'
+Plugin 'tpope/vim-surround'
+Plugin 'tpope/vim-fugitive'
+Plugin 'tpope/vim-endwise'
+Plugin 'tpope/vim-rails'
 " Run rspec easily from vim
-Bundle 'thoughtbot/vim-rspec'
+Plugin 'thoughtbot/vim-rspec'
 " And send those specs to tmux
-Bundle 'jgdavey/tslime.vim'
+Plugin 'jgdavey/tslime.vim'
+
+call vundle#end()
 
 syntax enable
 filetype plugin indent on " Load plugin and indent for recognized filetypes

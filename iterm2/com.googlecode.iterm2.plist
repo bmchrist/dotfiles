@@ -743,9 +743,13 @@
 	<key>NSTableView Sort Ordering KeyBingingTable</key>
 	<array/>
 	<key>NSWindow Frame Preferences</key>
-	<string>389 138 924 485 0 0 1440 877 </string>
+	<string>389 146 924 485 0 0 1440 900 </string>
+	<key>NSWindow Frame SUStatusFrame</key>
+	<string>2981 948 384 129 1440 -279 2560 1417 </string>
 	<key>NSWindow Frame iTerm Window 0</key>
-	<string>314 79 570 451 0 0 1440 877 </string>
+	<string>1444 146 570 451 1440 -279 2560 1417 </string>
+	<key>NSWindow Frame iTerm Window 1</key>
+	<string>0 1 1417 876 0 0 1440 877 </string>
 	<key>New Bookmarks</key>
 	<array>
 		<dict>
@@ -1477,7 +1481,7 @@
 	<key>NoSyncTimeOfLastPromo</key>
 	<real>461006852.61122</real>
 	<key>NoSyncTimeOfLastPromoDownload</key>
-	<real>461006852.61139399</real>
+	<real>465839899.73508501</real>
 	<key>OnlyWhenMoreTabs</key>
 	<true/>
 	<key>OpenArrangementAtStartup</key>
@@ -1540,7 +1544,7 @@
 	<key>SUHasLaunchedBefore</key>
 	<true/>
 	<key>SULastCheckTime</key>
-	<date>2015-08-11T17:24:03Z</date>
+	<date>2015-10-06T15:58:19Z</date>
 	<key>SavePasteHistory</key>
 	<false/>
 	<key>ShowBookmarkName</key>
@@ -1571,6 +1575,10 @@
 	<true/>
 	<key>UseLionStyleFullscreen</key>
 	<true/>
+	<key>WebKitDefaultFontSize</key>
+	<integer>11</integer>
+	<key>WebKitStandardFont</key>
+	<string>.Helvetica Neue DeskInterface</string>
 	<key>WindowNumber</key>
 	<true/>
 	<key>WindowStyle</key>
@@ -1578,6 +1586,6 @@
 	<key>WordCharacters</key>
 	<string>/-+\~_.</string>
 	<key>iTerm Version</key>
-	<string>2.1.1</string>
+	<string>2.1.3</string>
 </dict>
 </plist>
