@@ -6,7 +6,7 @@ set noerrorbells
 " =======
 " color kib_darktango
 set background=dark " Who uses a light background?
-set colorcolumn=81 " all my CS profs have REALLY small screens
+set colorcolumn=101 " let's keep things reasonable here
 "colorscheme base16-tomorrow
 set t_Co=256 " More colors
 colorscheme base16-atelierforest
