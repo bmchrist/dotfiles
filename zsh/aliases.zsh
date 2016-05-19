@@ -31,21 +31,23 @@ alias gbrd="git branch --merged master | grep -v master | grep -v stable | xargs
 alias gclean="gfrm; gbrd; git gc"
 alias gcf="git branch | cut -c 3- | pick | xargs git checkout"
 
-# Zenflowwwwww
-alias zfs="zenflow feature start --offline"
-alias zhs="zenflow hotfix start --offline"
+alias gfs="gclean && git checkout -b"
+alias gfp="git rev-parse --abbrev-ref HEAD | xargs git push origin"
+## Zenflowwwwww
+#alias zfs="zenflow feature start --offline"
+#alias zhs="zenflow hotfix start --offline"
 
-alias zfu="zenflow feature update"
-alias zhu="zenflow hotfix update"
+#alias zfu="zenflow feature update"
+#alias zhu="zenflow hotfix update"
 
-alias zfp="zenflow feature publish"
-alias zhp="zenflow hotfix publish"
+#alias zfp="zenflow feature publish"
+#alias zhp="zenflow hotfix publish"
 
-alias zhup="zhu && zhp"
-alias zfup="zfu && zfp"
+#alias zhup="zhu && zhp"
+#alias zfup="zfu && zfp"
 
-alias zfr="zenflow feature review"
-alias zhr="zenflow hotfix review"
+#alias zfr="zenflow feature review"
+#alias zhr="zenflow hotfix review"
 
-alias zff="zenflow feature finish"
-alias zhf="zenflow hotfix finish"
+#alias zff="zenflow feature finish"
+#alias zhf="zenflow hotfix finish"
