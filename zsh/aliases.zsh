@@ -32,20 +32,20 @@ alias gclean="gfrm; gbrd; git gc"
 alias gcf="git branch | cut -c 3- | pick | xargs git checkout"
 
 # Zenflowwwwww
-alias zfs="bundle exec zenflow feature start"
-alias zhs="bundle exec zenflow hotfix start"
+alias zfs="zenflow feature start --offline"
+alias zhs="zenflow hotfix start --offline"
 
-alias zfu="bundle exec zenflow feature update"
-alias zhu="bundle exec zenflow hotfix update"
+alias zfu="zenflow feature update"
+alias zhu="zenflow hotfix update"
 
-alias zfp="bundle exec zenflow feature publish"
-alias zhp="bundle exec zenflow hotfix publish"
+alias zfp="zenflow feature publish"
+alias zhp="zenflow hotfix publish"
 
 alias zhup="zhu && zhp"
 alias zfup="zfu && zfp"
 
-alias zfr="bundle exec zenflow feature review"
-alias zhr="bundle exec zenflow hotfix review"
+alias zfr="zenflow feature review"
+alias zhr="zenflow hotfix review"
 
-alias zff="bundle exec zenflow feature finish"
-alias zhf="bundle exec zenflow hotfix finish"
+alias zff="zenflow feature finish"
+alias zhf="zenflow hotfix finish"
