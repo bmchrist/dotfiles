@@ -32,7 +32,7 @@ alias gclean="gfrm; gbrd; git gc"
 alias gcf="git branch | cut -c 3- | pick | xargs git checkout"
 
 alias gfs="gclean && git checkout -b"
-alias gfp="git rev-parse --abbrev-ref HEAD | xargs git push origin"
+alias gfp="git rev-parse --abbrev-ref HEAD | xargs git push -u origin"
 ## Zenflowwwwww
 #alias zfs="zenflow feature start --offline"
 #alias zhs="zenflow hotfix start --offline"
