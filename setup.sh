@@ -3,8 +3,11 @@
 
 # Requires command line tools, xcode, git
 
+# Some config in here utilizes cloning some other repos, that's where git submodule comes in
 git submodule init
 git submodule update
+
+# symlink all the dotfiles
 bash config-setup.sh
 
 mkdir ~/projects
@@ -13,22 +16,21 @@ if [[ `uname -s` == "Darwin" ]]
 then
   bash brew-setup.sh
 
-  dscl . read /Users/ben | grep /bin/zsh
-  if [[ $? -eq 1 ]]
+  dscl . read /Users/ben | grep /bin/zsh  # checks user settings for zsh being set
+  if [[ $? -eq 1 ]] # If zsh isn't our current shell, change to it being the shell
   then
     chsh -s $(which zsh) $(whoami)
   fi
 
-  #zsh #rbenv needs some variables that are set in .zshrc
   bash osx-setup.sh
   pip install ipython
 
-  rbenv version | grep '2.0.0-p247'
+  rbenv version | grep '2.3.0'
   if [[ $? -eq 1 ]] # Grep found nothing returns 1
   then
-    rbenv install 2.0.0-p247
+    rbenv install 2.3.0
   fi
-  rbenv global 2.0.0-p247
+  rbenv global 2.3.0
 
   gem install tmuxinator
 

@@ -31,19 +31,23 @@ sudo defaults write /Library/Preferences/com.apple.loginwindow AdminHostInfo Hos
 # ==================
 # Mouse and Keyboard
 # ==================
-# Trackpad: swipe between spaces with three fingers
-# Not working ... :(
-#defaults write com.apple.AppleMultitouchTrackpad TrackpadThreeFingerHorizSwipeGesture -int 2
-#defaults write com.apple.driver.AppleBluetoothMultitouch.trackpad TrackpadThreeFingerHorizSwipeGesture -int 2
+# Expose/Mission control: three fingers (requires logout)
+defaults write com.apple.AppleMultitouchTrackpad TrackpadThreeFingerVertSwipeGesture -int 2; # Expose and Mission Control
+defaults write com.apple.driver.AppleBluetoothMultitouch.trackpad TrackpadThreeFingerVertSwipeGesture -int 2
 
-defaults write com.apple.driver.AppleBluetoothMultitouch.trackpad -int 1
+# Trackpad: swipe between spaces with three fingers (requires logout)
+defaults write com.apple.AppleMultitouchTrackpad TrackpadThreeFingerHorizSwipeGesture -int 2; # between apps/spaces
+defaults write com.apple.driver.AppleBluetoothMultitouch.trackpad TrackpadThreeFingerHorizSwipeGesture -int 2
+
+# Tap to click on
 defaults write com.apple.AppleMultitouchTrackpad Clicking -int 1
 
 # Disable press-and-hold for keys in favor of key repeat
 defaults write NSGlobalDomain ApplePressAndHoldEnabled -bool false
 
 # Set a blazingly fast keyboard repeat rate
-defaults write NSGlobalDomain KeyRepeat -int 0
+defaults write NSGlobalDomain InitialKeyRepeat -int 15
+defaults write NSGlobalDomain KeyRepeat -int 1
 
 # Turn off keyboard illumination when computer is not used for 5 minutes
 defaults write com.apple.BezelServices kDimTime -int 300
@@ -86,13 +90,14 @@ defaults write com.apple.dock dashboard-in-overlay -bool true
 defaults write com.apple.dock mru-spaces -bool false
 
 # Move the dock to the left
-defaults write com.apple.dock orientation -string left 
+defaults write com.apple.dock orientation -string left
 
 # Set dock icon size 36 px
 defaults write com.apple.dock tilesize -int 12
 
 # Enable dock magnification
-defaults write com.apple.dock largesize -float 48 
+defaults write com.apple.dock magnification -int 1
+defaults write com.apple.dock largesize -float 48
 
 # Enable the 2D Dock
 defaults write com.apple.dock no-glass -bool true
