@@ -10,3 +10,9 @@
 [submodule "dotjs"]
 	path = dotjs
 	url = git@github.com:defunkt/dotjs.git
+[submodule "rbenv/plugins/rbenv-bundle-exec"]
+	path = rbenv/plugins/rbenv-bundle-exec
+	url = https://github.com/maljub01/rbenv-bundle-exec.git
+[submodule "rbenv/plugins/rbenv-gem-rehash"]
+	path = rbenv/plugins/rbenv-gem-rehash
+	url = https://github.com/sstephenson/rbenv-gem-rehash.git
