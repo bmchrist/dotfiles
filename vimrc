@@ -58,6 +58,7 @@ set directory=/tmp " Keep temp files out
 set autoread
 
 filetype off
+
 " Plugins
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
@@ -80,8 +81,6 @@ Plugin 'Raimondi/delimitMate'
 Plugin 'scrooloose/syntastic'
 " Alternate related files easily (.c <-> .h)
 Plugin 'bmchrist/a.vim'
-"" Just like sublime
-Plugin 'kien/ctrlp.vim'
 " Comment shortcut
 Plugin 'scrooloose/nerdcommenter'
 Plugin 'groenewege/vim-less'
@@ -95,6 +94,8 @@ Plugin 'tpope/vim-rails'
 Plugin 'thoughtbot/vim-rspec'
 " And send those specs to tmux
 Plugin 'jgdavey/tslime.vim'
+" Fuzzy search - see mapping below for ctrl p - Faster than the ctrl-p plugin
+Plugin 'junegunn/fzf'
 
 call vundle#end()
 
@@ -137,6 +138,8 @@ endfunction
 " Delete training whitespace
 nnoremap <leader>d :let _s=@/<Bar>:%s/\s\+$//e<Bar>:let @/=_s<Bar>:nohl<CR>
 
+" Sublime-like fuzzy find files
+nmap <c-p> :FZF<CR>
 
 nmap <up> <nop>
 nmap <down> <nop>
