@@ -34,3 +34,6 @@ then
 fi
 
 stty icrnl # make sure return actaully makes a newline
+
+export NVM_DIR="$HOME/.nvm"
+. "$(brew --prefix nvm)/nvm.sh"

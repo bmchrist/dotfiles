@@ -33,6 +33,7 @@ brew install heroku-toolbelt
 #brew install w3m # for html display w/ mutt
 brew install tmux
 brew install rbenv ruby-build
+brew install nvm # basically rbenv/rvm for node
 brew install ghc
 brew install vim
 brew install reattach-to-user-namespace # For copying from tmux

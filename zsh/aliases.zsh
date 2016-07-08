@@ -5,6 +5,7 @@ alias dotfiles="cd ~/projects/dotfiles"
 alias hs="cd ~/projects/handshake"
 alias rsu="unicorn -p 3000 -c ./config/unicorn.rb"
 alias rsf="foreman start"
+alias rsfd=foreman start -d Procfile.dev
 alias rst="rails server thin"
 alias hrc="heroku run rails c --app"
 
