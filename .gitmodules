@@ -1,6 +1,6 @@
 [submodule "vim/bundle/vundle"]
 	path = vim/bundle/vundle
-	url = git@github.com:gmarik/vundle.git
+	url = git@github.com:VundleVim/Vundle.vim.git
 [submodule "tmuxinator"]
 	path = tmuxinator
 	url = https://github.com/aziz/tmuxinator
