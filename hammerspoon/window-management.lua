@@ -17,7 +17,7 @@ registerHotkey("Move the window to the previous screen", hyper, 'P', hs.grid.pus
 -- Toggle maximizing a screen (not fullscreen)
 -- toggleMaximize adapted from https://github.com/gwww/dotfiles/blob/master/_hammerspoon/init.lua
 -- ------------
-registerHotkey("Maximize the window", hyper, 'space', function() toggleMaximize(hs.window.focusedWindow()) end)
+registerHotkey("Maximize the window", hypershift, 'space', function() toggleMaximize(hs.window.focusedWindow()) end)
 local previousSizes = {}
 function toggleMaximize(window)
   if not window then
