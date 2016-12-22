@@ -17,7 +17,7 @@
 	<key>AutoHideTmuxClientSession</key>
 	<false/>
 	<key>CheckTestRelease</key>
-	<true/>
+	<false/>
 	<key>ClosingHotkeySwitchesSpaces</key>
 	<true/>
 	<key>CommandSelection</key>
@@ -750,13 +750,15 @@
 		<integer>1</integer>
 	</dict>
 	<key>NSWindow Frame Preferences</key>
-	<string>2673 218 924 485 1440 -208 2560 1440 </string>
+	<string>389 414 606 456 0 0 1440 877 </string>
 	<key>NSWindow Frame SUStatusFrame</key>
-	<string>2981 948 384 129 1440 -279 2560 1417 </string>
+	<string>2981 1048 400 129 1440 -179 2560 1417 </string>
+	<key>NSWindow Frame SUUpdateAlert</key>
+	<string>2410 692 620 392 1440 -94 2560 1440 </string>
 	<key>NSWindow Frame iTerm Window 0</key>
-	<string>1440 425 2558 1408 1440 -208 2560 1417 </string>
+	<string>1440 -31 2559 1404 1440 -44 2560 1417 </string>
 	<key>NSWindow Frame iTerm Window 1</key>
-	<string>662 301 585 451 0 0 1440 877 </string>
+	<string>2968 558 585 452 1440 -94 2560 1417 </string>
 	<key>New Bookmarks</key>
 	<array>
 		<dict>
@@ -1485,14 +1487,30 @@
 			<string>/Users/ben</string>
 		</dict>
 	</array>
+	<key>NoSyncConfirmBeta</key>
+	<true/>
 	<key>NoSyncHaveShownPromoWithId_4</key>
+	<true/>
+	<key>NoSyncHaveWarnedAboutPasteConfirmationChange</key>
+	<true/>
+	<key>NoSyncInstallationId</key>
+	<string>29DF094B-BCCE-4329-AAA8-03B3CB9B2D4D</string>
+	<key>NoSyncLastTipTime</key>
+	<real>486920822.56934398</real>
+	<key>NoSyncPermissionToShowTip</key>
 	<true/>
 	<key>NoSyncTimeOfFirstLaunchOfVersionWithTip</key>
 	<real>477689427.71698499</real>
 	<key>NoSyncTimeOfLastPromo</key>
 	<real>477688802.55004698</real>
 	<key>NoSyncTimeOfLastPromoDownload</key>
-	<real>486497536.19080698</real>
+	<real>486722628.224774</real>
+	<key>NoSyncTipsDisabled</key>
+	<true/>
+	<key>NoSyncTipsToNotShow</key>
+	<array>
+		<string>000</string>
+	</array>
 	<key>OnlyWhenMoreTabs</key>
 	<true/>
 	<key>OpenArrangementAtStartup</key>
@@ -1505,6 +1523,8 @@
 	<false/>
 	<key>PasteFromClipboard</key>
 	<false/>
+	<key>PasteTabToStringTabStopSize</key>
+	<integer>2</integer>
 	<key>PointerActions</key>
 	<dict>
 		<key>Button,1,1,,</key>
@@ -1553,11 +1573,11 @@
 	<key>SUFeedAlternateAppNameKey</key>
 	<string>iTerm</string>
 	<key>SUFeedURL</key>
-	<string>https://iterm2.com/appcasts/testing.xml</string>
+	<string>https://iterm2.com/appcasts/final.xml?shard=23</string>
 	<key>SUHasLaunchedBefore</key>
 	<true/>
 	<key>SULastCheckTime</key>
-	<date>2016-06-01T22:03:17Z</date>
+	<date>2016-12-21T02:03:29Z</date>
 	<key>SavePasteHistory</key>
 	<false/>
 	<key>ShowBookmarkName</key>
@@ -1603,6 +1623,6 @@
 	<key>findRegex_iTerm</key>
 	<false/>
 	<key>iTerm Version</key>
-	<string>2.1.4</string>
+	<string>3.0.12</string>
 </dict>
 </plist>
