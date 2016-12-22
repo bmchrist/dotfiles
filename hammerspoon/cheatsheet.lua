@@ -194,7 +194,7 @@ end
 
 local myView = nil
 
-hs.hotkey.bind({"cmd", "alt", "ctrl"}, "C", function()
+registerHotkey("Displays a cheat sheet for the current application", hyper, "c", function()
   if not myView then
     myView = hs.webview.new({x = 100, y = 100, w = 1080, h = 600}, { developerExtrasEnabled = true })
       :windowStyle("utility")

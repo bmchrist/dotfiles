@@ -1,24 +1,15 @@
--- Gloabs, since the included additional Lua files use them
+-- Globals, since the included additional Lua files use them
 hyper = {"ctrl", "cmd"}
 hypershift = {"ctrl", "cmd", "shift"}
 
 hs.window.animationDuration = 0 -- TODO not working?
 
--- TODO hotkey binder that documents useage for display and warns if re-used combo
-
--- TODO: document what these do
-require("window-management")
-require("vim")
-require("mouse")
-
-require("hcalendar") -- TODO: customize
-require("cheatsheet")
-
+-- --------
+-- Wrapper for registering hotkeys including the ability to print documentation
+-- --------
 hotkeys = {}
-function register_hotkey(description, ...)
+function registerHotkey(description, ...)
   local hotkey = hs.hotkey.new(...)
-
-  --hs.alert.show(hotkey.idx)
 
   if hotkeys[hotkey.idx] then
     hs.alert.show("Duplicate registration for " .. hotkey.idx)
@@ -27,6 +18,24 @@ function register_hotkey(description, ...)
     hotkey:enable()
   end
 end
+
+function displayHelp()
+  local str = ""
+  for k,v in pairs(hotkeys) do
+    str = str .. k .. " " .. v .. "\n"
+  end
+  hs.alert.show(str, { textSize = "15" }, nil, nil, 7) -- TODO better display method
+end
 ---- build posture reminder into this
-register_hotkey("Locks the Computer", hyper, "escape", nil, hs.caffeinate.lockScreen) -- TODO annoying animation, music not paused but is muted
-register_hotkey("Reload Hammerspoon Config", hyper, "r", nil, hs.reload)
+registerHotkey("Locks the Computer", hyper, "escape", nil, hs.caffeinate.lockScreen) -- TODO annoying animation, music not paused but is muted
+registerHotkey("Reload Hammerspoon Config", hyper, "r", nil, hs.reload)
+registerHotkey("Display Help", hyper, "/", nil, displayHelp)
+-- --------
+-- End hotkey wrapper
+-- --------
+
+require("window-management")
+require("vim")
+require("mouse")
+require("hcalendar")
+require("cheatsheet")

@@ -23,4 +23,4 @@ function mouseHighlight()
     mouseCircleTimer = hs.timer.doAfter(1, function() mouseCircle:delete() end)
 end
 
-hs.hotkey.bind(hyper, "D", mouseHighlight)
+registerHotkey("Highlights the mouse", hyper, "d", mouseHighlight)
