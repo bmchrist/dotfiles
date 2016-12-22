@@ -30,7 +30,7 @@ alias gd="git diff"
 alias gfrm="git checkout master && git fetch && git rebase origin/master"
 alias gbrd="git branch --merged master | grep -v master | grep -v stable | xargs git branch -d; git branch-cleanup"
 alias gclean="gfrm; gbrd; git gc"
-alias gcf="git branch | cut -c 3- | pick | xargs git checkout"
+alias gcf="git branch | cut -c 3- | fzf | xargs git checkout"
 
 alias gfs="gclean && git checkout -b"
 alias gfp="git rev-parse --abbrev-ref HEAD | xargs git push -u origin"

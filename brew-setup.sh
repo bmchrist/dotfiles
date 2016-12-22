@@ -11,6 +11,9 @@ brew update
 # Upgrade any already-installed formulae
 brew upgrade
 
+# ------------------
+# Misc tools
+# ------------------
 brew install coreutils
 # Install GNU `find`, `locate`, `updatedb`, and `xargs`, g-prefixed
 brew install findutils
@@ -19,30 +22,40 @@ brew install bash
 # Install wget with IRI support
 brew install wget --enable-iri
 
-# Install more recent versions of some OS X tools
+brew install ack
+
 brew tap homebrew/dupes
 brew install homebrew/dupes/grep
+
+brew install git
+
+brew install tmux
+brew install reattach-to-user-namespace # For copying from tmux
+
+brew install vim
+
+# ------------------
+# Language/environment specific tools
+# ------------------
+brew install heroku-toolbelt
+
 brew tap josegonzalez/homebrew-php
 brew install php55
 
-brew install git
 brew install python
-brew install ack
-#brew install mutt
-brew install heroku-toolbelt
-#brew install w3m # for html display w/ mutt
-brew install tmux
-brew install rbenv ruby-build
+
+brew install rbenv ruby-build # we will install ruby through this
+
 brew install nvm # basically rbenv/rvm for node
-brew install ghc
-brew install vim
-brew install reattach-to-user-namespace # For copying from tmux
 
-# Gosh I love thoughtbot
-brew tap thoughtbot/formulae
-brew install pick # fuzzy matching
+brew install ghc # haskell
 
+#brew install mutt
+#brew install w3m # for html display w/ mutt
+
+# ------------------
 # Install native apps
+# ------------------
 brew tap phinze/homebrew-cask
 brew install brew-cask
 
@@ -50,30 +63,28 @@ function cask_install() {
   brew cask install "${@}"
 }
 
-cask_install balsamiq
+cask_install 1password
+cask_install balsamiq # for mockups
 cask_install caffeine
 #cask_install cord # remote desktop
-cask_install divvy
 cask_install deluge
 cask_install dropbox
-cask_install duet
+#cask_install duet
 cask_install firefox
 cask_install flash
 cask_install flux
+cask_install gog-galaxy #games
 cask_install gotomeeting
 cask_install google-chrome
 cask_install iterm2
-cask_install karabiner # for key bindings
-#cask_install mailbox # :( defunct.
 cask_install monity
 cask_install nosleep
 cask_install screenhero
-cask_install seil # for key bindings
+cask_install hammerspoon # ctrl to superkey. Also configure in keyboard settings caps lock to ctrl
 cask_install skype
-#cask_install slate # using divvy isntead
 cask_install spotify
-cask_install steam
-cask_install teamspeak
+cask_install steam # games
+#cask_install teamspeak
 cask_install torbrowser
 cask_install sublime-text
 cask_install virtualbox

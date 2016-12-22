@@ -15,6 +15,7 @@ config_link zprofile
 config_link vim
 config_link vimrc
 config_link mime.types
+config_link hammerspoon
 
 # Terminal mail client config
 #config_link mutt
