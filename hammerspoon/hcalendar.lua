@@ -16,7 +16,6 @@ function HCalendar.create(screen)
 
   hcal.topleft = {screen:frame().x + 40, 658}
 
-  -- TODO wider, scale based on screen
   hcal.titlewh = {180,32}
   hcal.daywh = {23.43,24}
 
@@ -176,16 +175,7 @@ function HCalendar:selectToday()
   self.todaymidlinedraw:show()
 end
 
-
-
-
-
-
-
-
-
-
-
+-- TODO: reset when screens change
 local calendars = {}
 for k,screen in pairs(hs.screen.allScreens()) do
   calendars[k] = HCalendar.create(screen)
