@@ -1,5 +1,5 @@
-hcalbgcolor = {red=0,blue=0,green=0,alpha=0.3}
-hcaltitlecolor = {red=1,blue=1,green=1,alpha=0.3}
+hcalbgcolor = {red=0,blue=0,green=0,alpha=0.4}
+hcaltitlecolor = {red=1,blue=1,green=1,alpha=0.5}
 offdaycolor = {red=255/255,blue=120/255,green=120/255,alpha=1}
 hcaltodaycolor = {red=1,blue=1,green=1,alpha=0.2}
 midlinecolor = {red=1,blue=1,green=1,alpha=0.5}
@@ -19,14 +19,12 @@ function HCalendar.create(screen)
   hcal.titlewh = {180,32}
   hcal.daywh = {23.43,24}
 
-  hs.alert.show("Creating")
   hcal:update()
 
   return hcal
 end
 
 function HCalendar:update()
-  hs.alert.show("Updating")
   local currentmonth = os.date("%m")
   local currentyear = os.date("%Y")
   local firstdayofnextmonth = os.time{year=currentyear, month=currentmonth+1, day=1}
@@ -183,6 +181,6 @@ end
 
 hcaltimer = hs.timer.doEvery(1800, function()
   for k,calendar in pairs(calendars) do
-    calendar.update()
+    calendar:update()
   end
 end)
