@@ -1,6 +1,6 @@
 -- Globals, since the included additional Lua files use them
-hyper = {"ctrl", "cmd"}
-hypershift = {"ctrl", "cmd", "shift"}
+hyper = {"ctrl", "cmd", "alt"}
+hypershift = {"ctrl", "cmd", "alt", "shift"}
 
 hs.window.animationDuration = 0 -- TODO not working?
 
@@ -39,3 +39,5 @@ require("vim")
 require("mouse")
 require("hcalendar")
 require("cheatsheet")
+
+hs.alert.show("Hammerspoon Loaded")
