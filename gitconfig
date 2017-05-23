@@ -3,7 +3,7 @@
 
 [user]
   name = Ben Christensen
-  email = bmchrist@mtu.edu
+  email = ben@joinhandshake.com
 
 [alias]
   root = rev-parse --show-toplevel
