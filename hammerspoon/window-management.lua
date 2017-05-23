@@ -10,8 +10,14 @@ registerHotkey("Snap window left", hyper, 'h', function() hs.window.focusedWindo
 -- ------------
 -- Move screens between monitors. "Next" and "Previous" loop back around at end
 -- ------------
-registerHotkey("Move the window to the next screen", hyper, 'N', hs.grid.pushWindowNextScreen)
-registerHotkey("Move the window to the previous screen", hyper, 'P', hs.grid.pushWindowPrevScreen)
+registerHotkey("Move the window to the next screen", hyper, 'N', function()
+  clearMaximize(hs.window.focusedWindow())
+  hs.grid.pushWindowNextScreen()
+end )
+registerHotkey("Move the window to the previous screen", hyper, 'P', function()
+  clearMaximize(hs.window.focusedWindow())
+  hs.grid.pushWindowPrevScreen()
+end)
 
 -- ------------
 -- Toggle maximizing a screen (not fullscreen)
@@ -20,6 +26,7 @@ registerHotkey("Move the window to the previous screen", hyper, 'P', hs.grid.pus
 registerHotkey("Maximize the window", hyper, 'space', function() toggleMaximize(hs.window.focusedWindow()) end)
 -- TODO deal with: maximize, move to other monitor, maximize (right now the last command will revert)
 local previousSizes = {}
+
 function toggleMaximize(window)
   if not window then
     return indow
@@ -31,10 +38,17 @@ function toggleMaximize(window)
     window:maximize()
   else
     window:setFrame(previousSizes[id])
-    previousSizes[id] = nil
+    clearMaximize(window)
   end
 
   return window
+end
+
+-- Need to rethink this, but for now just dealing with annoyances of moving a maximized window to a
+-- new screen, toggling size and having it go back to the other screen
+function clearMaximize(window)
+  local id = window:id()
+  previousSizes[id] = nil
 end
 
 -- ------------
