@@ -1,3 +1,4 @@
+-- TODO check for monitors changing and redo everything, toherwise you get doubles when unplugging, or only one monitor when plugging in
 hcalbgcolor = {red=0,blue=0,green=0,alpha=0.4}
 hcaltitlecolor = {red=2,blue=2,green=2,alpha=0.8}
 offdaycolor = {red=255/255,blue=120/255,green=120/255,alpha=1}
