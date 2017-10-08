@@ -6,10 +6,10 @@ if [[ $? -eq 1 ]]; then # if type brew returned that brew was not found (aka not
 fi
 
 # Make sure we’re using the latest Homebrew
-brew update
+#brew update
 
 # Upgrade any already-installed formulae
-brew upgrade
+#brew upgrade
 
 # ------------------
 # Misc tools
@@ -24,8 +24,7 @@ brew install wget --enable-iri
 
 brew install ack
 
-brew tap homebrew/dupes
-brew install homebrew/dupes/grep
+brew install grep
 
 brew install git
 
@@ -56,39 +55,42 @@ brew install ghc # haskell
 # ------------------
 # Install native apps
 # ------------------
-brew tap phinze/homebrew-cask
-brew install brew-cask
+brew tap caskroom/cask
 
 function cask_install() {
   brew cask install "${@}"
 }
 
-cask_install 1password
-cask_install balsamiq # for mockups
-cask_install caffeine
-#cask_install cord # remote desktop
-cask_install deluge
-cask_install dropbox
-#cask_install duet
-cask_install firefox
-cask_install flash
-cask_install flux
-cask_install gog-galaxy #games
-cask_install gotomeeting
-cask_install google-chrome
+# Core Utility
 cask_install iterm2
-cask_install monity
-cask_install nosleep
-cask_install screenhero
-cask_install hammerspoon # ctrl to superkey. Also configure in keyboard settings caps lock to ctrl
-cask_install skype
-cask_install spotify
-cask_install steam # games
-#cask_install teamspeak
-cask_install torbrowser
+cask_install firefox
+cask_install 1password
+cask_install dropbox
 cask_install sublime-text
-cask_install virtualbox
+cask_install flux
+cask_install nosleep
+cask_install hammerspoon # ctrl to superkey. Also configure in keyboard settings caps lock to ctrl
+
+# Additional Utility
+cask_install caffeine
+cask_install google-chrome
+cask_install torbrowser
+cask_install monity
+cask_install spotify
 cask_install vlc
+
+# Collaboration
+cask_install screenhero
+cask_install gotomeeting
+cask_install slack
+cask_install skype
+
+# Misc
+cask_install balsamiq # for mockups
+cask_install virtualbox
+cask_install deluge
+cask_install gog-galaxy # games
+cask_install steam # games
 
 brew cleanup
 
