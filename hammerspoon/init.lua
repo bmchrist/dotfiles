@@ -4,6 +4,8 @@ hypershift = {"ctrl", "cmd", "alt", "shift"}
 
 hs.window.animationDuration = 0 -- TODO not working?
 
+hs.hotkey.bind({"cmd", "alt"}, "V", function() hs.eventtap.keyStrokes(hs.pasteboard.getContents()) end)
+
 -- --------
 -- Wrapper for registering hotkeys including the ability to print documentation
 -- --------
@@ -39,5 +41,6 @@ require("vim")
 require("mouse")
 require("hcalendar")
 require("cheatsheet")
+require("brightness")
 
 hs.alert.show("Hammerspoon Loaded")
