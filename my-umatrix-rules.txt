@@ -1,0 +1,64 @@
+https-strict: behind-the-scene false
+matrix-off: about-scheme true
+matrix-off: behind-the-scene true
+matrix-off: chrome-extension-scheme true
+matrix-off: chrome-scheme true
+matrix-off: localhost true
+matrix-off: moz-extension-scheme true
+matrix-off: opera-scheme true
+matrix-off: wyciwyg-scheme true
+noscript-spoof: * true
+referrer-spoof: * true
+referrer-spoof: behind-the-scene false
+* * * block
+* * cookie block
+* * css allow
+* * frame block
+* * media block
+* * script block
+* * xhr block
+* 1st-party * allow
+* 1st-party frame allow
+amazon.com amazon.com cookie allow
+amazon.com amazon.com script allow
+amazon.com amazon.com xhr allow
+amazon.com media-amazon.com image allow
+amazon.com ssl-images-amazon.com image allow
+amazon.com ssl-images-amazon.com script allow
+buzzfeed.com 1st-party script inherit
+buzzfeed.com buzzfeed.com script allow
+facebook.com 1st-party cookie allow
+facebook.com facebook.com script allow
+facebook.com fbcdn.net script allow
+facebook.com scontent-ort2-2.xx.fbcdn.net image allow
+facebook.com static.xx.fbcdn.net image allow
+github.com 1st-party * allow
+github.com 1st-party script allow
+google.com * image inherit
+google.com google.com cookie allow
+google.com google.com script allow
+google.com google.com xhr allow
+isthereanydeal.com gstatic.com script allow
+isthereanydeal.com isthereanydeal.com cookie allow
+isthereanydeal.com isthereanydeal.com script allow
+isthereanydeal.com isthereanydeal.com xhr allow
+isthereanydeal.com s3-eu-west-1.amazonaws.com image allow
+isthereanydeal.com s3-eu-west-1.amazonaws.com script allow
+isthereanydeal.com steamstatic.com image allow
+reddit.com 1st-party cookie allow
+reddit.com 1st-party script allow
+reddit.com redditmedia.com script allow
+reddit.com redditstatic.com script allow
+steamcommunity.com steamcommunity.com cookie allow
+steamcommunity.com steamcommunity.com script allow
+steamcommunity.com steamcommunity.com xhr allow
+steamcommunity.com steamstatic.com image allow
+steamcommunity.com steamstatic.com script allow
+steampowered.com steampowered.com cookie allow
+steampowered.com steampowered.com script allow
+steampowered.com steamstatic.com image allow
+steampowered.com steamstatic.com media allow
+steampowered.com steamstatic.com script allow
+youtube.com 1st-party cookie allow
+youtube.com 1st-party script allow
+youtube.com 1st-party xhr allow
