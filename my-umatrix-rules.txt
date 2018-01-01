@@ -3,25 +3,22 @@ matrix-off: about-scheme true
 matrix-off: behind-the-scene true
 matrix-off: chrome-extension-scheme true
 matrix-off: chrome-scheme true
+ 
 matrix-off: localhost true
 matrix-off: moz-extension-scheme true
 matrix-off: opera-scheme true
+ 
 matrix-off: wyciwyg-scheme true
 noscript-spoof: * true
 referrer-spoof: * true
 referrer-spoof: behind-the-scene false
 * * * block
-* * cookie block
 * * css allow
-* * frame block
-* * media block
-* * other block
-* * script block
-* * xhr block
-* 1st-party * allow
 * 1st-party frame allow
+* 1st-party image allow
 * cloudflare.com script allow
 * gravatar.com image allow
+* paypalobjects.com script allow
 * steamcommunity.com * allow
 alaskaair.com alaskaair.com cookie allow
 alaskaair.com alaskaair.com script allow
@@ -48,6 +45,7 @@ carta.com carta.com cookie allow
 carta.com carta.com script allow
 carta.com carta.com xhr allow
 carta.com drd50mzzs58bu.cloudfront.net script allow
+com * script inherit
 duckduckgo.com duckduckgo.com script allow
 expensify.com d2k5nsl2zxldvw.cloudfront.net image allow
 expensify.com d2k5nsl2zxldvw.cloudfront.net script allow
@@ -58,6 +56,9 @@ expensify.com s3.amazonaws.com image allow
 expensify.com wp.com image allow
 facebook.com 1st-party cookie allow
 facebook.com facebook.com script allow
+facebook.com facebook.com xhr allow
+facebook.com fbcdn.net image allow
+facebook.com fbcdn.net media allow
 facebook.com fbcdn.net script allow
 facebook.com scontent-ort2-2.xx.fbcdn.net image allow
 facebook.com scontent.fdet1-1.fna.fbcdn.net image allow
@@ -100,6 +101,10 @@ namely.com namely.com cookie allow
 namely.com namely.com script allow
 namely.com namely.com xhr allow
 openlibrary.org openlibrary.org script allow
+paypal.com paypal.com * allow
+paypal.com paypal.com cookie allow
+paypal.com paypal.com script allow
+paypal.com paypalobjects.com image allow
 reddit.com 1st-party cookie allow
 reddit.com 1st-party script allow
 reddit.com redd.it media allow
@@ -141,6 +146,18 @@ thecurrent.org thecurrent.org xhr allow
 thewirecutter.com cloudflare.com script allow
 thewirecutter.com d1b5h9psu9yexj.cloudfront.net image allow
 thewirecutter.com thewirecutter.com script allow
+thirteen50leather.com * script inherit
+thirteen50leather.com paypal.com cookie allow
+thirteen50leather.com paypal.com frame allow
+thirteen50leather.com paypal.com script allow
+thirteen50leather.com paypal.com xhr allow
+thirteen50leather.com shopify.com cookie allow
+thirteen50leather.com shopify.com frame allow
+thirteen50leather.com shopify.com image allow
+thirteen50leather.com shopify.com script allow
+thirteen50leather.com thirteen50leather.com cookie allow
+thirteen50leather.com thirteen50leather.com script allow
+thirteen50leather.com thirteen50leather.com xhr allow
 youtube.com 1st-party cookie allow
 youtube.com 1st-party script allow
 youtube.com 1st-party xhr allow
