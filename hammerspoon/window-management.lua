@@ -59,7 +59,7 @@ registerHotkey("Show window hints for window switching", hyper, '.', hs.hints.wi
 -- ------------
 -- Grid based movement and resizing
 -- ------------
-hs.grid.setGrid("4x3")
+hs.grid.setGrid("5x4")
 -- TODO: add a grid size changer
 registerHotkey("Show grid", hyper, 'g', hs.grid.show)
 registerHotkey("Move window left", hyper, 'Left', hs.grid.pushWindowLeft)
