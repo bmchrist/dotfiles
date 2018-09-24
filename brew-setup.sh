@@ -38,9 +38,6 @@ brew install vim
 # ------------------
 brew install heroku-toolbelt
 
-brew tap josegonzalez/homebrew-php
-brew install php55
-
 brew install python
 
 brew install rbenv ruby-build # we will install ruby through this
@@ -74,21 +71,17 @@ cask_install hammerspoon # ctrl to superkey. Also configure in keyboard settings
 # Additional Utility
 cask_install caffeine
 cask_install google-chrome
-cask_install torbrowser
-cask_install monity
+cask_install tor-browser
 cask_install spotify
 cask_install vlc
 
 # Collaboration
-cask_install screenhero
-cask_install gotomeeting
 cask_install slack
 cask_install skype
+cask_install zoomus
 
 # Misc
-cask_install balsamiq # for mockups
 cask_install virtualbox
-cask_install deluge
 cask_install gog-galaxy # games
 cask_install steam # games
 

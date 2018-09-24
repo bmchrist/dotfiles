@@ -29,3 +29,6 @@ config_link tmux_statusline
 config_link inputrc
 config_link irbrc
 config_link rbenv/plugins # Might cause issues when rbenv doesn't already exist - tbd
+
+cp ~/.ssh/config ~/.ssh/config-$(date "+%Y-%m-%d.%H:%M:%S").bak
+ln -s `pwd`/ssh-config ~/.ssh/config
