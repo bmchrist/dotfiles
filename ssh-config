@@ -1,1 +1,4 @@
-# sample
+Host github.com
+  Hostname github.com
+  IdentityFile ~/.ssh/github_rsa
+  PreferredAuthentications publickey
