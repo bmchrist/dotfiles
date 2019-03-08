@@ -81,8 +81,9 @@ registerHotkey("Set window layout - Comms", hyper, '1', function()
   hs.appfinder.appFromName("iTerm2"):mainWindow():setFullScreen(false)
   hs.timer.doAfter(1, function() -- delay is to allow un-fullscreen to finish
     hs.layout.apply({
-      { "iTerm2", nil, "Color LCD", hs.layout.maximized, nil, nil }, -- todo fullscreen
-      { "Spotify", nil, "Color LCD", hs.layout.maximized, nil, nil },
+      { "iTerm2", nil, "Color LCD", hs.layout.maximized, nil, nil },
+      { "Spotify", nil, "Color LCD", hs.layout.left50, nil, nil },
+      { "Todoist", nil, "Color LCD", hs.layout.right50, nil, nil },
       { "Firefox", nil, "Thunderbolt Display", hs.layout.left50, nil, nil },
       { "Slack", nil, "Thunderbolt Display", hs.layout.right50, nil, nil }
     })
