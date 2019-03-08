@@ -55,6 +55,16 @@ defaults write com.google.Chrome.plist AppleEnableSwipeNavigateWithScrolls -bool
 # ==============
 # Other Settings
 # ==============
+# Set up menubar
+defaults write com.apple.systemuiserver menuExtras -array \
+  "/System/Library/CoreServices/Menu Extras/Clock.menu" \
+  "/System/Library/CoreServices/Menu Extras/Battery.menu" \
+  "/System/Library/CoreServices/Menu Extras/AirPort.menu" \
+  "/System/Library/CoreServices/Menu Extras/Displays.menu" \
+  "/System/Library/CoreServices/Menu Extras/Volume.menu"
+defaults write com.apple.menuextra.battery ShowPercent YES
+defaults write com.apple.menuextra.clock DateFormat -string 'EEE MMM d  H:mm:ss'
+
 # Save screenshots to screenshots folder
 mkdir -p ~/Pictures/Screenshots
 defaults write com.apple.screencapture location -string "$HOME/Pictures/Screenshots"
