@@ -43,7 +43,7 @@ defaults write com.apple.AppleMultitouchTrackpad Clicking -int 1
 defaults write NSGlobalDomain ApplePressAndHoldEnabled -bool false
 
 # Set a blazingly fast keyboard repeat rate
-defaults write NSGlobalDomain InitialKeyRepeat -int 15
+defaults write NSGlobalDomain InitialKeyRepeat -int 25
 defaults write NSGlobalDomain KeyRepeat -int 1
 
 # Turn off keyboard illumination when computer is not used for 5 minutes
