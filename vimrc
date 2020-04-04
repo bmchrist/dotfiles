@@ -97,6 +97,8 @@ Plugin 'jgdavey/tslime.vim'
 " Fuzzy search - see mapping below for ctrl p - Faster than the ctrl-p plugin
 Plugin 'junegunn/fzf'
 
+Plugin 'elixir-editors/vim-elixir'
+
 call vundle#end()
 
 syntax enable
