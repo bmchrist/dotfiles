@@ -9,6 +9,7 @@ function config_link {
 }
 
 config_link ackrc
+config_link ctags
 config_link zsh
 config_link zshrc
 config_link zprofile
