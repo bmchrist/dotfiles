@@ -2,14 +2,14 @@
 
 type brew
 if [[ $? -eq 1 ]]; then # if type brew returned that brew was not found (aka not installed)
-  ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+  /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 fi
 
 # Make sure we’re using the latest Homebrew
-#brew update
+brew update
 
 # Upgrade any already-installed formulae
-#brew upgrade
+brew upgrade
 
 # ------------------
 # Misc tools
@@ -20,7 +20,7 @@ brew install findutils
 # Install Bash 4
 brew install bash
 # Install wget with IRI support
-brew install wget --enable-iri
+brew install wget
 
 brew install ack
 
@@ -52,33 +52,32 @@ brew install ghc # haskell
 # ------------------
 # Install native apps
 # ------------------
-brew tap caskroom/cask
+brew tap homebrew/cask
 
 function cask_install() {
-  brew cask install "${@}"
+  brew install "${@}" --cask
 }
 
 # Core Utility
 cask_install iterm2
 cask_install firefox
-cask_install 1password
-cask_install dropbox
+# cask_install 1password
 cask_install sublime-text
-cask_install flux
+#cask_install flux
 cask_install nosleep
 cask_install hammerspoon # ctrl to superkey. Also configure in keyboard settings caps lock to ctrl
 
 # Additional Utility
 cask_install caffeine
-cask_install google-chrome
-cask_install tor-browser
+#cask_install google-chrome
+#cask_install tor-browser
 cask_install spotify
 cask_install vlc
 
 # Collaboration
-cask_install slack
-cask_install skype
-cask_install zoomus
+#cask_install slack
+#cask_install skype
+#cask_install zoomus
 
 # Misc
 cask_install virtualbox

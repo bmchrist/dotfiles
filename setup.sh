@@ -22,17 +22,14 @@ then
     chsh -s $(which zsh) $(whoami)
   fi
 
-  bash osx-setup.sh
+  # bash osx-setup.sh
   pip install ipython
 
-  rbenv version | grep '2.3.0'
-  if [[ $? -eq 1 ]] # Grep found nothing returns 1
-  then
-    rbenv install 2.3.0
-  fi
-  rbenv global 2.3.0
-
-  gem install tmuxinator
+  # rbenv version | grep '2.3.0'
+  # if [[ $? -eq 1 ]] # Grep found nothing returns 1
+  # then
+  #  rbenv install 2.3.0
+  # fi
 
 elif [[ `uname -s` == "Linux" ]]
 then

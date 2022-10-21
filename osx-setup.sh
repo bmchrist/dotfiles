@@ -12,13 +12,6 @@ while true; do sudo -n true; sleep 60; kill -0 "$$" || exit; done 2>/dev/null &
 # ===============
 # System Settings
 # ===============
-read -p "Hostname: " hostname
-# Set computer name (as done via System Preferences → Sharing)
-sudo scutil --set ComputerName "$hostname"
-sudo scutil --set HostName "$hostname"
-sudo scutil --set LocalHostName "$hostname"
-sudo defaults write /Library/Preferences/SystemConfiguration/com.apple.smb.server NetBIOSName -string "$hostname"
-
 # Disable opening and closing window animations
 defaults write NSGlobalDomain NSAutomaticWindowAnimationsEnabled -bool false
 
@@ -28,29 +21,16 @@ sudo defaults write /Library/Preferences/com.apple.loginwindow AdminHostInfo Hos
 # ==================
 # Mouse and Keyboard
 # ==================
-# Expose/Mission control: three fingers (requires logout)
-defaults write com.apple.AppleMultitouchTrackpad TrackpadThreeFingerVertSwipeGesture -int 2; # Expose and Mission Control
-defaults write com.apple.driver.AppleBluetoothMultitouch.trackpad TrackpadThreeFingerVertSwipeGesture -int 2
-
-# Trackpad: swipe between spaces with three fingers (requires logout)
-defaults write com.apple.AppleMultitouchTrackpad TrackpadThreeFingerHorizSwipeGesture -int 2; # between apps/spaces
-defaults write com.apple.driver.AppleBluetoothMultitouch.trackpad TrackpadThreeFingerHorizSwipeGesture -int 2
-
-# Tap to click on
-defaults write com.apple.AppleMultitouchTrackpad Clicking -int 1
-
-# Disable press-and-hold for keys in favor of key repeat
-defaults write NSGlobalDomain ApplePressAndHoldEnabled -bool false
 
 # Set a blazingly fast keyboard repeat rate
-defaults write NSGlobalDomain InitialKeyRepeat -int 25
-defaults write NSGlobalDomain KeyRepeat -int 1
-
-# Turn off keyboard illumination when computer is not used for 5 minutes
-defaults write com.apple.BezelServices kDimTime -int 300
+# seems to not be used now
+#defaults write NSGlobalDomain InitialKeyRepeat -int 25
+#defaults write NSGlobalDomain KeyRepeat -int 1
 
 # Chrome two finger next/previous disabled
 defaults write com.google.Chrome.plist AppleEnableSwipeNavigateWithScrolls -bool FALSE
+
+# turn off sound effects?
 
 # ==============
 # Other Settings
@@ -65,36 +45,25 @@ defaults write com.apple.systemuiserver menuExtras -array \
 defaults write com.apple.menuextra.battery ShowPercent YES
 defaults write com.apple.menuextra.clock DateFormat -string 'EEE MMM d  H:mm:ss'
 
-# Save screenshots to screenshots folder
-mkdir -p ~/Pictures/Screenshots
-defaults write com.apple.screencapture location -string "$HOME/Pictures/Screenshots"
+## Save screenshots to preview for easy editing/pasting without saving to disk
+defaults write com.apple.screencapture target -string "preview"
 
-# Save screenshots in PNG format (other options: BMP, GIF, JPG, PDF, TIFF)
-defaults write com.apple.screencapture type -string "png"
+# these don't seem to work anymore
+## Finder: disable window animations and Get Info animations
+#defaults write com.apple.finder DisableAllAnimations -bool true
 
-# Disable shadow in screenshots
-defaults write com.apple.screencapture disable-shadow -bool true
+## Finder: show path bar
+#defaults write com.apple.finder ShowPathbar -bool true
 
-# Finder: disable window animations and Get Info animations
-defaults write com.apple.finder DisableAllAnimations -bool true
 
-# Finder: show path bar
-defaults write com.apple.finder ShowPathbar -bool true
-
-# Ensure empty trash securely is false (no need for all that extra I/O -- the drive should be encrypted anyway)
-defaults write com.apple.finder EmptyTrashSecurely -bool false
+# Automatically hide and show the Dock
+defaults write com.apple.dock autohide -bool true
 
 # Speed up Mission Control animations
 defaults write com.apple.dock expose-animation-duration -float 0.1
 
-# Disable Dashboard
-defaults write com.apple.dashboard mcx-disabled -bool true
-
-# Don’t show Dashboard as a Space
-defaults write com.apple.dock dashboard-in-overlay -bool true
-
 # Don’t automatically rearrange Spaces based on most recent use
-defaults write com.apple.dock mru-spaces -bool false
+defaults write com.apple.dock mru-spaces -int 0
 
 # Move the dock to the left
 defaults write com.apple.dock orientation -string left
@@ -103,27 +72,13 @@ defaults write com.apple.dock orientation -string left
 defaults write com.apple.dock tilesize -int 12
 
 # Enable dock magnification
-defaults write com.apple.dock magnification -int 1
 defaults write com.apple.dock largesize -float 48
-
-# Enable the 2D Dock
-defaults write com.apple.dock no-glass -bool true
-
-# Automatically hide and show the Dock
-defaults write com.apple.dock autohide -bool true
-
-# Set bottom right hot corner to put display to sleep
-defaults write com.apple.dock wvous-br-corner -int 10
-defaults write com.apple.dock wvous-br-modifier -int 0
 
 # No process indicator lights
 defaults write com.apple.dock show-process-indicators -int 0
 
 # Minimize to app icon
 defaults write com.apple.dock minimize-to-application -int 1
-
-# Disable Spotlight indexing for any volume that gets mounted and has not yet been indexed before.
-sudo defaults write /.Spotlight-V100/VolumeConfiguration Exclusions -array "/Volumes"
 
 for app in "Dashboard" "Dock" "Finder" "SystemUIServer"; do
         killall "$app" > /dev/null 2>&1
