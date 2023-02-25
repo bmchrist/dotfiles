@@ -5,6 +5,8 @@ if [[ $? -eq 1 ]]; then # if type brew returned that brew was not found (aka not
   /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 fi
 
+source ~/.zshrc
+
 # Make sure we’re using the latest Homebrew
 brew update
 

@@ -1,5 +1,6 @@
 Host github.com
   Hostname github.com
-  IdentityFile ~/.ssh/github_rsa
+  IdentityFile ~/.ssh/github
   PreferredAuthentications publickey
+  AddKeysToAgent Yes
   UseKeychain yes

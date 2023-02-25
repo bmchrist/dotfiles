@@ -8,13 +8,13 @@ git submodule init
 git submodule update
 
 # symlink all the dotfiles
-bash config-setup.sh
+zsh config-setup.sh
 
 mkdir ~/projects
 
 if [[ `uname -s` == "Darwin" ]]
 then
-  bash brew-setup.sh
+  zsh brew-setup.sh
 
   dscl . read /Users/ben | grep /bin/zsh  # checks user settings for zsh being set
   if [[ $? -eq 1 ]] # If zsh isn't our current shell, change to it being the shell
