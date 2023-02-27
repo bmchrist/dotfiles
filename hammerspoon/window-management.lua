@@ -1,3 +1,6 @@
+-- Note: if accessibility or something that uses that API is turned on, apps will start to behave oddly
+-- restart app after turning off anything that uses accessibility api to fix
+--
 -- ------------
 -- Snap windows to top, left, bottom, right halves of the current screen
 -- ------------
