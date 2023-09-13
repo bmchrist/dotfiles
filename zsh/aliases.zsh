@@ -3,11 +3,8 @@ alias dotfiles="cd ~/projects/dotfiles"
 
 # handshake stuff
 alias hs="cd ~/projects/handshake"
-alias rsu="unicorn -p 3000 -c ./config/unicorn.rb"
 alias rsf="foreman start"
 alias rsfd="foreman start -f Procfile.dev"
-alias rst="rails server thin"
-alias hrc="heroku run rails c --app"
 
 # Django aliases
 alias django="python manage.py"
@@ -27,28 +24,10 @@ alias ga="git add"
 alias gc="git commit"
 alias gco="git checkout"
 alias gd="git diff"
-alias gfrm="git checkout master && git fetch && git rebase origin/master"
-alias gbrd="git branch --merged master | grep -v master | grep -v stable | xargs git branch -d; git branch-cleanup"
+alias gfrm="git checkout main && git fetch && git rebase origin/main"
+alias gbrd="git branch --merged main | grep -v main | grep -v stable | xargs git branch -d; git branch-cleanup"
 alias gclean="gfrm; gbrd; git gc"
 alias gcf="git branch | cut -c 3- | fzf | xargs git checkout"
 
 alias gfs="gclean && git checkout -b"
 alias gfp="git rev-parse --abbrev-ref HEAD | xargs git push -u origin"
-## Zenflowwwwww
-#alias zfs="zenflow feature start --offline"
-#alias zhs="zenflow hotfix start --offline"
-
-#alias zfu="zenflow feature update"
-#alias zhu="zenflow hotfix update"
-
-#alias zfp="zenflow feature publish"
-#alias zhp="zenflow hotfix publish"
-
-#alias zhup="zhu && zhp"
-#alias zfup="zfu && zfp"
-
-#alias zfr="zenflow feature review"
-#alias zhr="zenflow hotfix review"
-
-#alias zff="zenflow feature finish"
-#alias zhf="zenflow hotfix finish"
