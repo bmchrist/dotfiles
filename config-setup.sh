@@ -15,13 +15,7 @@ config_link zshrc
 config_link zprofile
 config_link vim
 config_link vimrc
-config_link mime.types
 config_link hammerspoon
-
-# Terminal mail client config
-#config_link mutt
-#config_link mailcap
-#config_link muttrc
 
 config_link gitconfig
 config_link tmux.conf
@@ -29,6 +23,6 @@ config_link tmux_statusline
 config_link inputrc
 config_link irbrc
 
-# don't do this for RDE
-cp ~/.ssh/config ~/.ssh/config-$(date "+%Y-%m-%d.%H:%M:%S").bak
-ln -s `pwd`/ssh-config ~/.ssh/config
+# don't do this for RDE. Figure out a way for later, for now just getting rid of it as this is not a critical step
+#cp ~/.ssh/config ~/.ssh/config-$(date "+%Y-%m-%d.%H:%M:%S").bak
+#ln -s `pwd`/ssh-config ~/.ssh/config

@@ -25,21 +25,14 @@ then
   # bash osx-setup.sh
   pip install ipython
 
-  # rbenv version | grep '2.3.0'
-  # if [[ $? -eq 1 ]] # Grep found nothing returns 1
-  # then
-  #  rbenv install 2.3.0
-  # fi
-
 elif [[ `uname -s` == "Linux" ]]
 then
   if [[ -e /etc/debian_version ]]
   then
     echo "Updating apt-get..."
     sudo apt-get update >/dev/null
-    sudo apt-get -y install git python-pip ipython make zsh tmux
+    sudo apt-get -y install git make zsh tmux
   fi
-  # todo - check for RDE and any special stuff here - like tmux, zsh
 fi
 
 vim +BundleInstall +qall
