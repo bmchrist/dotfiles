@@ -4,6 +4,7 @@
 # Requires command line tools, xcode, git
 
 # Some config in here utilizes cloning some other repos, that's where git submodule comes in
+# TODO: issue right now that zsh not installed first - fix!
 git submodule init
 git submodule update
 
