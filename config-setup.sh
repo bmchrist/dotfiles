@@ -23,13 +23,12 @@ config_link hammerspoon
 #config_link mailcap
 #config_link muttrc
 
-config_link irssi
 config_link gitconfig
 config_link tmux.conf
 config_link tmux_statusline
 config_link inputrc
 config_link irbrc
-config_link rbenv/plugins # Might cause issues when rbenv doesn't already exist - tbd
 
+# don't do this for RDE
 cp ~/.ssh/config ~/.ssh/config-$(date "+%Y-%m-%d.%H:%M:%S").bak
 ln -s `pwd`/ssh-config ~/.ssh/config

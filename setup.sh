@@ -39,6 +39,7 @@ then
     sudo apt-get update >/dev/null
     sudo apt-get -y install git python-pip ipython make zsh tmux
   fi
+  # todo - check for RDE and any special stuff here - like tmux, zsh
 fi
 
 vim +BundleInstall +qall
