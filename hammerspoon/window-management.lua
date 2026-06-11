@@ -80,7 +80,7 @@ registerHotkey("Reize window shorter", hypershift, 'Down', hs.grid.resizeWindowS
 -- ------------
 -- Comms based layout
 -- TODO take into account single monitor setup
-registerHotkey("Set window layout - Comms", hyper, '1', function()
+registerHotkey("Set window layout - Comms", hyper, '9', function()
   hs.appfinder.appFromName("iTerm2"):mainWindow():setFullScreen(false)
   hs.timer.doAfter(1, function() -- delay is to allow un-fullscreen to finish
     hs.layout.apply({
@@ -94,7 +94,7 @@ registerHotkey("Set window layout - Comms", hyper, '1', function()
   end )
 end)
 -- Dev based layout
-registerHotkey("Set window layout - Dev", hyper, '2', function()
+registerHotkey("Set window layout - Dev", hyper, '8', function()
   hs.appfinder.appFromName("iTerm2"):mainWindow():setFullScreen(false)
   hs.timer.doAfter(1, function() -- delay is to allow un-fullscreen to finish
     hs.layout.apply({
@@ -105,4 +105,49 @@ registerHotkey("Set window layout - Dev", hyper, '2', function()
     })
     hs.appfinder.appFromName("iTerm2"):mainWindow():setFullScreen(true)
   end )
+end)
+
+local screenOne = hs.screen.primaryScreen()
+local screenTwo = screenOne:next()
+
+-- ------------
+-- Arrange Chrome windows by profile, plus Claude and Notion placement
+-- Chrome includes the profile name in window titles: "Page - ProfileName - Google Chrome"
+-- ------------
+local function arrangeChromeByProfile()
+  local chrome = hs.application.get("Google Chrome")
+  if chrome then
+    for _, win in ipairs(chrome:allWindows()) do
+      local title = win:title() or ""
+      if title:find("Ben %(Work%)$") then
+        -- Middle third, top half of screen one
+        win:moveToScreen(screenOne)
+        win:moveToUnit('[33,0,66,50]')
+      elseif title:find("Ben %(Personal%)$") then
+        -- Left half of screen two
+        win:moveToScreen(screenTwo)
+        win:moveToUnit('[0,0,50,100]')
+      end
+    end
+  end
+
+end
+registerHotkey("Arrange Chrome windows by profile", hyper, 'c', arrangeChromeByProfile)
+registerHotkey("Set window layout - HS/Etc Combo", hyper, '1', function()
+  arrangeChromeByProfile()
+  hs.layout.apply({
+    -- Right third, full height
+    { "iTerm2", nil, screenOne, '[66,0,100,100]', nil, nil },
+    -- Middle third, bottom half
+    { "Todoist", nil, screenOne, '[33,50,66,100]', nil, nil },
+    -- Left third, from 33% to 66% height
+    { "Discord", nil, screenOne, '[0,15,33,66]', nil, nil },
+    -- Left third, from 66% to 100% height
+    { "Messages", nil, screenOne, '[0,66,33,100]', nil, nil },
+    -- Top-right corner of screen two
+    { "Notion", nil, screenTwo, '[50,0,100,50]', nil, nil },
+    { "Proton Mail", nil, screenTwo, '[50,0,100,50]', nil, nil },
+    -- Bottom-right corner of screen two
+    { "Claude", nil, screenTwo, '[50,50,100,100]', nil, nil },
+  })
 end)
