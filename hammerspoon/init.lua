@@ -39,7 +39,6 @@ registerHotkey("Display Help", hyper, "/", nil, displayHelp)
 require("window-management")
 require("vim")
 require("mouse")
-require("hcalendar")
 require("cheatsheet")
 require("brightness")
 
