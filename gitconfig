@@ -10,3 +10,5 @@
   branch-cleanup = remote prune origin
 [github]
 	user = bmchrist
+[init]
+	defaultBranch = main

@@ -54,3 +54,5 @@ then
 fi
 
 stty icrnl # make sure return actaully makes a newline
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+export PATH="$HOME/.local/bin:$PATH"
