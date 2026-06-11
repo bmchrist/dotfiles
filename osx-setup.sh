@@ -72,7 +72,7 @@ defaults write com.apple.dock orientation -string left
 defaults write com.apple.dock tilesize -int 12
 
 # Enable dock magnification
-defaults write com.apple.dock largesize -float 48
+defaults write com.apple.dock largesize -float 50
 
 # No process indicator lights
 defaults write com.apple.dock show-process-indicators -int 0

@@ -38,7 +38,7 @@ brew install vim
 # ------------------
 # Language/environment specific tools
 # ------------------
-brew install heroku-toolbelt
+# brew install heroku-toolbelt
 
 brew install python
 
@@ -50,6 +50,7 @@ brew install ghc # haskell
 
 #brew install mutt
 #brew install w3m # for html display w/ mutt
+
 
 # ------------------
 # Install native apps
@@ -66,14 +67,14 @@ cask_install firefox
 # cask_install 1password
 cask_install sublime-text
 #cask_install flux
-cask_install nosleep
+# cask_install nosleep
 cask_install hammerspoon # ctrl to superkey. Also configure in keyboard settings caps lock to ctrl
 
 # Additional Utility
 cask_install caffeine
 #cask_install google-chrome
 #cask_install tor-browser
-cask_install spotify
+# cask_install spotify
 cask_install vlc
 
 # Collaboration

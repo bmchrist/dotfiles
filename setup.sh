@@ -23,7 +23,7 @@ then
     chsh -s $(which zsh) $(whoami)
   fi
 
-  # bash osx-setup.sh
+  bash osx-setup.sh
   pip install ipython
 
 elif [[ `uname -s` == "Linux" ]]
